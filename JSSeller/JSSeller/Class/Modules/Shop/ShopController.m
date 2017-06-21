@@ -9,6 +9,7 @@
 #import "ShopController.h"
 
 @interface ShopController ()
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 @end
 
@@ -17,6 +18,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self registUI];
+}
+
+- (void)registUI {
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    
+    //  毛玻璃view 视图
+    
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    
+    //添加到要有毛玻璃特效的控件中
+    
+    effectView.frame = self.backgroundImageView.bounds;
+    
+    [self.backgroundImageView addSubview:effectView];
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 - (void)didReceiveMemoryWarning {
