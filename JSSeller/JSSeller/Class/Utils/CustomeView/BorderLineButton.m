@@ -28,7 +28,7 @@
 {
     self.layer.borderColor = RGB(226, 226, 226).CGColor;
     self.layer.borderWidth = 1;
-    self.layer.cornerRadius = 13;
+    self.layer.cornerRadius = 7;
     self.clipsToBounds = YES;
 }
 
