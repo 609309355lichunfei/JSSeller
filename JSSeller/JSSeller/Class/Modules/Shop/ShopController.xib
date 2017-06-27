@@ -64,6 +64,9 @@
                                 <constraint firstAttribute="width" secondItem="1Fs-0O-PDn" secondAttribute="height" id="foK-UL-uGx"/>
                             </constraints>
                             <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="settingAction:" destination="-1" eventType="touchUpInside" id="lK5-ZL-kMl"/>
+                            </connections>
                         </button>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zr-0y-Dbc">
                             <rect key="frame" x="163" y="141" width="51" height="31"/>
@@ -203,6 +206,7 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="DVf-53-FPH" firstAttribute="centerY" secondItem="tje-pg-CG4" secondAttribute="centerY" id="8EU-ce-w4l"/>
                         <constraint firstItem="7KO-Si-phO" firstAttribute="leading" secondItem="dIB-2p-3R0" secondAttribute="trailing" id="BZm-ta-kac"/>
@@ -220,6 +224,9 @@
                         <constraint firstItem="is7-1J-6gg" firstAttribute="leading" secondItem="HXK-zC-rYC" secondAttribute="leading" constant="8" id="ouG-wO-hdL"/>
                         <constraint firstItem="cTY-Z2-lhM" firstAttribute="centerY" secondItem="HXK-zC-rYC" secondAttribute="centerY" id="qDY-Lz-AwI"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="RVb-il-EcK" appends="YES" id="rvP-Kj-icl"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaL-Qu-Kpq">
                     <rect key="frame" x="0.0" y="276" width="375" height="30"/>
@@ -372,6 +379,11 @@
             </constraints>
             <point key="canvasLocation" x="32.5" y="65.5"/>
         </view>
+        <tapGestureRecognizer id="RVb-il-EcK" userLabel="turnoverTap">
+            <connections>
+                <action selector="turnoverAction:" destination="-1" id="YMO-YE-h5O"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="icon" width="300" height="300"/>

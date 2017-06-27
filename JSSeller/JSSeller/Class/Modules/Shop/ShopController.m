@@ -7,6 +7,8 @@
 //
 
 #import "ShopController.h"
+#import "SettingViewController.h"
+#import "TurnoverViewController.h"
 
 @interface ShopController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
@@ -34,7 +36,15 @@
     
     [self.backgroundImageView addSubview:effectView];
 }
+- (IBAction)settingAction:(id)sender {
+    SettingViewController *settingVC = [[SettingViewController alloc]init];
+    [self.parentViewController.navigationController pushViewController:settingVC animated:YES];
+}
 
+- (IBAction)turnoverAction:(id)sender {
+    TurnoverViewController *turnoverVC = [[TurnoverViewController alloc]init];
+    [self.parentViewController.navigationController pushViewController:turnoverVC animated:YES];
+}
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     

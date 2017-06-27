@@ -33,6 +33,9 @@
 }
 
 - (void)registUI {
+    self.indentManageBT.layer.borderWidth = 0;
+    self.indentManageBT.layer.cornerRadius = 40;
+    self.indentManageBT.clipsToBounds = YES;
     self.homeVC = [[HomeViewController alloc]init];
     [self addChildViewController:self.homeVC];
     self.homeVC.view.frame = self.mainView.bounds;

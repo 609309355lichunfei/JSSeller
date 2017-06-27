@@ -84,6 +84,20 @@
 		9C89979C1EFA16170097AF38 /* ClassfyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C89979B1EFA16170097AF38 /* ClassfyModel.m */; };
 		9C8997A01EFA1B680097AF38 /* AddFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C89979E1EFA1B680097AF38 /* AddFoodViewController.m */; };
 		9C8997A11EFA1B680097AF38 /* AddFoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C89979F1EFA1B680097AF38 /* AddFoodViewController.xib */; };
+		9C8997AB1EFE2A0F0097AF38 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8997A91EFE2A0F0097AF38 /* SettingViewController.m */; };
+		9C8997AC1EFE2A0F0097AF38 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8997AA1EFE2A0F0097AF38 /* SettingViewController.xib */; };
+		9C8997B01EFE2BFF0097AF38 /* ShopEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8997AE1EFE2BFF0097AF38 /* ShopEditViewController.m */; };
+		9C8997B11EFE2BFF0097AF38 /* ShopEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8997AF1EFE2BFF0097AF38 /* ShopEditViewController.xib */; };
+		9C8997B51EFE2F5A0097AF38 /* paymentAccountSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8997B31EFE2F5A0097AF38 /* paymentAccountSettingViewController.m */; };
+		9C8997B61EFE2F5A0097AF38 /* paymentAccountSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8997B41EFE2F5A0097AF38 /* paymentAccountSettingViewController.xib */; };
+		9C8997BA1EFE30BA0097AF38 /* AlipayBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8997B81EFE30BA0097AF38 /* AlipayBindingViewController.m */; };
+		9C8997BB1EFE30BA0097AF38 /* AlipayBindingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8997B91EFE30BA0097AF38 /* AlipayBindingViewController.xib */; };
+		9C8997BF1EFE31B70097AF38 /* BankCardBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8997BD1EFE31B70097AF38 /* BankCardBindingViewController.m */; };
+		9C8997C01EFE31B70097AF38 /* BankCardBindingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8997BE1EFE31B70097AF38 /* BankCardBindingViewController.xib */; };
+		9C8997C41EFE35510097AF38 /* TurnoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8997C21EFE35510097AF38 /* TurnoverViewController.m */; };
+		9C8997C51EFE35510097AF38 /* TurnoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8997C31EFE35510097AF38 /* TurnoverViewController.xib */; };
+		9C8997C91EFE3C780097AF38 /* TurnoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8997C71EFE3C780097AF38 /* TurnoverTableViewCell.m */; };
+		9C8997CA1EFE3C780097AF38 /* TurnoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8997C81EFE3C780097AF38 /* TurnoverTableViewCell.xib */; };
 		B3CA79781EF773B200888226 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CA79771EF773B200888226 /* main.m */; };
 		B3CA797B1EF773B200888226 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CA797A1EF773B200888226 /* AppDelegate.m */; };
 		B3CA797E1EF773B200888226 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CA797D1EF773B200888226 /* ViewController.m */; };
@@ -261,6 +275,27 @@
 		9C89979D1EFA1B680097AF38 /* AddFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFoodViewController.h; sourceTree = "<group>"; };
 		9C89979E1EFA1B680097AF38 /* AddFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFoodViewController.m; sourceTree = "<group>"; };
 		9C89979F1EFA1B680097AF38 /* AddFoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFoodViewController.xib; sourceTree = "<group>"; };
+		9C8997A81EFE2A0F0097AF38 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		9C8997A91EFE2A0F0097AF38 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		9C8997AA1EFE2A0F0097AF38 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		9C8997AD1EFE2BFF0097AF38 /* ShopEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopEditViewController.h; sourceTree = "<group>"; };
+		9C8997AE1EFE2BFF0097AF38 /* ShopEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopEditViewController.m; sourceTree = "<group>"; };
+		9C8997AF1EFE2BFF0097AF38 /* ShopEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopEditViewController.xib; sourceTree = "<group>"; };
+		9C8997B21EFE2F5A0097AF38 /* paymentAccountSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paymentAccountSettingViewController.h; sourceTree = "<group>"; };
+		9C8997B31EFE2F5A0097AF38 /* paymentAccountSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = paymentAccountSettingViewController.m; sourceTree = "<group>"; };
+		9C8997B41EFE2F5A0097AF38 /* paymentAccountSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = paymentAccountSettingViewController.xib; sourceTree = "<group>"; };
+		9C8997B71EFE30BA0097AF38 /* AlipayBindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlipayBindingViewController.h; sourceTree = "<group>"; };
+		9C8997B81EFE30BA0097AF38 /* AlipayBindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlipayBindingViewController.m; sourceTree = "<group>"; };
+		9C8997B91EFE30BA0097AF38 /* AlipayBindingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlipayBindingViewController.xib; sourceTree = "<group>"; };
+		9C8997BC1EFE31B70097AF38 /* BankCardBindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardBindingViewController.h; sourceTree = "<group>"; };
+		9C8997BD1EFE31B70097AF38 /* BankCardBindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardBindingViewController.m; sourceTree = "<group>"; };
+		9C8997BE1EFE31B70097AF38 /* BankCardBindingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardBindingViewController.xib; sourceTree = "<group>"; };
+		9C8997C11EFE35510097AF38 /* TurnoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnoverViewController.h; sourceTree = "<group>"; };
+		9C8997C21EFE35510097AF38 /* TurnoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnoverViewController.m; sourceTree = "<group>"; };
+		9C8997C31EFE35510097AF38 /* TurnoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TurnoverViewController.xib; sourceTree = "<group>"; };
+		9C8997C61EFE3C780097AF38 /* TurnoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnoverTableViewCell.h; sourceTree = "<group>"; };
+		9C8997C71EFE3C780097AF38 /* TurnoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnoverTableViewCell.m; sourceTree = "<group>"; };
+		9C8997C81EFE3C780097AF38 /* TurnoverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TurnoverTableViewCell.xib; sourceTree = "<group>"; };
 		B3CA79731EF773B200888226 /* JSSeller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSSeller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CA79771EF773B200888226 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3CA79791EF773B200888226 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -652,6 +687,24 @@
 		9C89976D1EF8C4650097AF38 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9C8997A81EFE2A0F0097AF38 /* SettingViewController.h */,
+				9C8997A91EFE2A0F0097AF38 /* SettingViewController.m */,
+				9C8997AA1EFE2A0F0097AF38 /* SettingViewController.xib */,
+				9C8997AD1EFE2BFF0097AF38 /* ShopEditViewController.h */,
+				9C8997AE1EFE2BFF0097AF38 /* ShopEditViewController.m */,
+				9C8997AF1EFE2BFF0097AF38 /* ShopEditViewController.xib */,
+				9C8997B21EFE2F5A0097AF38 /* paymentAccountSettingViewController.h */,
+				9C8997B31EFE2F5A0097AF38 /* paymentAccountSettingViewController.m */,
+				9C8997B41EFE2F5A0097AF38 /* paymentAccountSettingViewController.xib */,
+				9C8997B71EFE30BA0097AF38 /* AlipayBindingViewController.h */,
+				9C8997B81EFE30BA0097AF38 /* AlipayBindingViewController.m */,
+				9C8997B91EFE30BA0097AF38 /* AlipayBindingViewController.xib */,
+				9C8997BC1EFE31B70097AF38 /* BankCardBindingViewController.h */,
+				9C8997BD1EFE31B70097AF38 /* BankCardBindingViewController.m */,
+				9C8997BE1EFE31B70097AF38 /* BankCardBindingViewController.xib */,
+				9C8997C11EFE35510097AF38 /* TurnoverViewController.h */,
+				9C8997C21EFE35510097AF38 /* TurnoverViewController.m */,
+				9C8997C31EFE35510097AF38 /* TurnoverViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -659,6 +712,9 @@
 		9C89976E1EF8C4650097AF38 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9C8997C61EFE3C780097AF38 /* TurnoverTableViewCell.h */,
+				9C8997C71EFE3C780097AF38 /* TurnoverTableViewCell.m */,
+				9C8997C81EFE3C780097AF38 /* TurnoverTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -918,7 +974,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C8997751EF8C53B0097AF38 /* HomeTableViewCell.xib in Resources */,
+				9C8997AC1EFE2A0F0097AF38 /* SettingViewController.xib in Resources */,
+				9C8997B11EFE2BFF0097AF38 /* ShopEditViewController.xib in Resources */,
 				9C8997941EFA0D550097AF38 /* ClassifyControlViewController.xib in Resources */,
+				9C8997C01EFE31B70097AF38 /* BankCardBindingViewController.xib in Resources */,
 				B3CA79891EF773B200888226 /* LaunchScreen.storyboard in Resources */,
 				9C8996BC1EF8B55D0097AF38 /* MenuViewController.xib in Resources */,
 				9C8997341EF8B8DD0097AF38 /* LICENSE in Resources */,
@@ -929,11 +988,15 @@
 				9C8996BA1EF8B55D0097AF38 /* HomeViewController.xib in Resources */,
 				9C89978B1EF958290097AF38 /* MenuTableViewHeaderView.xib in Resources */,
 				9C8997861EF9016D0097AF38 /* MenuTableViewCell.xib in Resources */,
+				9C8997BB1EFE30BA0097AF38 /* AlipayBindingViewController.xib in Resources */,
 				B3CA79861EF773B200888226 /* Assets.xcassets in Resources */,
 				9C8997A11EFA1B680097AF38 /* AddFoodViewController.xib in Resources */,
+				9C8997CA1EFE3C780097AF38 /* TurnoverTableViewCell.xib in Resources */,
+				9C8997B61EFE2F5A0097AF38 /* paymentAccountSettingViewController.xib in Resources */,
 				9C89976C1EF8BC080097AF38 /* MainViewController.xib in Resources */,
 				B3CA79811EF773B200888226 /* Main.storyboard in Resources */,
 				9C89974D1EF8B8DD0097AF38 /* IQKeyboardManager.bundle in Resources */,
+				9C8997C51EFE35510097AF38 /* TurnoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,6 +1071,7 @@
 			files = (
 				9C89978F1EFA05750097AF38 /* MenuModel.m in Sources */,
 				9C8997501EF8B8DD0097AF38 /* LCPanGestureRecognizer.m in Sources */,
+				9C8997B01EFE2BFF0097AF38 /* ShopEditViewController.m in Sources */,
 				9C8997491EF8B8DD0097AF38 /* IQPreviousNextView.m in Sources */,
 				9C8997401EF8B8DD0097AF38 /* IQUIScrollView+Additions.m in Sources */,
 				9C8996B71EF8B55D0097AF38 /* ClassifyController.m in Sources */,
@@ -1021,6 +1085,7 @@
 				9C8997581EF8B8DD0097AF38 /* UIFont+Fonts.m in Sources */,
 				9C8997411EF8B8DD0097AF38 /* IQUITextFieldView+Additions.m in Sources */,
 				9C8997551EF8B8DD0097AF38 /* MBProgressHUD+HH.m in Sources */,
+				9C8997AB1EFE2A0F0097AF38 /* SettingViewController.m in Sources */,
 				9C8997461EF8B8DD0097AF38 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				9C8997351EF8B8DD0097AF38 /* AbstractActionSheetPicker.m in Sources */,
 				9C8997451EF8B8DD0097AF38 /* IQKeyboardManager.m in Sources */,
@@ -1030,8 +1095,10 @@
 				9C8997421EF8B8DD0097AF38 /* IQUIView+Hierarchy.m in Sources */,
 				9C89975D1EF8B8DD0097AF38 /* HeaderModel.m in Sources */,
 				9C89975C1EF8B8DD0097AF38 /* BorderLineButton.m in Sources */,
+				9C8997B51EFE2F5A0097AF38 /* paymentAccountSettingViewController.m in Sources */,
 				9C8997601EF8B8DD0097AF38 /* OpenUDID.m in Sources */,
 				9C8997851EF9016D0097AF38 /* MenuTableViewCell.m in Sources */,
+				9C8997BF1EFE31B70097AF38 /* BankCardBindingViewController.m in Sources */,
 				9C89973B1EF8B8DD0097AF38 /* ActionSheetStringPicker.m in Sources */,
 				9C8997471EF8B8DD0097AF38 /* IQTextView.m in Sources */,
 				9C89973C1EF8B8DD0097AF38 /* DistancePickerView.m in Sources */,
@@ -1039,6 +1106,7 @@
 				9C89976B1EF8BC080097AF38 /* MainViewController.m in Sources */,
 				9C8996BD1EF8B55D0097AF38 /* ShopController.m in Sources */,
 				9C8997891EF958130097AF38 /* MenuTableViewHeaderView.m in Sources */,
+				9C8997BA1EFE30BA0097AF38 /* AlipayBindingViewController.m in Sources */,
 				9C89973F1EF8B8DD0097AF38 /* IQNSArray+Sort.m in Sources */,
 				9C8997931EFA0D550097AF38 /* ClassifyControlViewController.m in Sources */,
 				9C8997431EF8B8DD0097AF38 /* IQUIViewController+Additions.m in Sources */,
@@ -1070,8 +1138,10 @@
 				9C89974C1EF8B8DD0097AF38 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				9C89975B1EF8B8DD0097AF38 /* UIView+CCExtension.m in Sources */,
 				9C8996B91EF8B55D0097AF38 /* HomeViewController.m in Sources */,
+				9C8997C91EFE3C780097AF38 /* TurnoverTableViewCell.m in Sources */,
 				9C89974A1EF8B8DD0097AF38 /* IQTitleBarButtonItem.m in Sources */,
 				9C8997371EF8B8DD0097AF38 /* ActionSheetDatePicker.m in Sources */,
+				9C8997C41EFE35510097AF38 /* TurnoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
