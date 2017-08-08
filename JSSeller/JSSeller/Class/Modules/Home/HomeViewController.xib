@@ -24,23 +24,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-NV-EwQ">
-                    <rect key="frame" x="281" y="64" width="94" height="30"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="异常订单">
-                        <color key="titleColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="exceptionIndentAction:" destination="-1" eventType="touchUpInside" id="zFT-Zg-Qps"/>
-                    </connections>
-                </button>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twY-EL-rzk">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="NeM-3i-hur"/>
                     </constraints>
-                    <color key="barTintColor" red="0.062745098040000002" green="0.49803921569999998" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,49 +40,60 @@
                     </items>
                 </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJD-tj-MNn">
-                    <rect key="frame" x="0.0" y="64" width="94" height="30"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="0.0" y="64" width="94" height="40"/>
+                    <color key="backgroundColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="ada-3P-Pxp"/>
+                        <constraint firstAttribute="height" constant="40" id="ada-3P-Pxp"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                     <state key="normal" title="新订单">
-                        <color key="titleColor" red="0.99215686270000003" green="0.58823529409999997" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="newIndentAction:" destination="-1" eventType="touchUpInside" id="2Y6-0Q-5aO"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZZg-0b-9WR">
-                    <rect key="frame" x="0.0" y="95" width="375" height="572"/>
-                    <color key="backgroundColor" red="0.88719951919999995" green="0.88719951919999995" blue="0.88719951919999995" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-NV-EwQ">
+                    <rect key="frame" x="281.5" y="64" width="93.5" height="40"/>
+                    <color key="backgroundColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
+                    <state key="normal" title="异常订单">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="IfW-IB-wXF"/>
-                        <outlet property="delegate" destination="-1" id="HkQ-0D-nfE"/>
+                        <action selector="exceptionIndentAction:" destination="-1" eventType="touchUpInside" id="zFT-Zg-Qps"/>
                     </connections>
-                </tableView>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1c-aV-LhE">
-                    <rect key="frame" x="94" y="64" width="93.5" height="30"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <rect key="frame" x="94" y="64" width="93" height="40"/>
+                    <color key="backgroundColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                     <state key="normal" title="已接单">
-                        <color key="titleColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="acceptedIndentAction:" destination="-1" eventType="touchUpInside" id="Fdb-cf-4Dc"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98x-wC-nyX">
-                    <rect key="frame" x="188" y="64" width="93.5" height="30"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <rect key="frame" x="187.5" y="64" width="94" height="40"/>
+                    <color key="backgroundColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                     <state key="normal" title="已完成">
-                        <color key="titleColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="completeIndentAction:" destination="-1" eventType="touchUpInside" id="YZS-Jh-Zh5"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZZg-0b-9WR">
+                    <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                    <color key="backgroundColor" red="0.88719951919999995" green="0.88719951919999995" blue="0.88719951919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="IfW-IB-wXF"/>
+                        <outlet property="delegate" destination="-1" id="HkQ-0D-nfE"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="0.88719951919999995" green="0.88719951919999995" blue="0.88719951919999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -106,7 +106,7 @@
                 <constraint firstAttribute="trailing" secondItem="Lpw-NV-EwQ" secondAttribute="trailing" id="Shi-5c-msi"/>
                 <constraint firstAttribute="trailing" secondItem="ZZg-0b-9WR" secondAttribute="trailing" id="Vpl-dt-kF8"/>
                 <constraint firstItem="twY-EL-rzk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y2G-hl-thu"/>
-                <constraint firstItem="ZZg-0b-9WR" firstAttribute="top" secondItem="Lpw-NV-EwQ" secondAttribute="bottom" constant="1" id="ZjJ-0R-UpL"/>
+                <constraint firstItem="ZZg-0b-9WR" firstAttribute="top" secondItem="Lpw-NV-EwQ" secondAttribute="bottom" id="ZjJ-0R-UpL"/>
                 <constraint firstItem="X1c-aV-LhE" firstAttribute="height" secondItem="hJD-tj-MNn" secondAttribute="height" id="ZoM-4S-fTb"/>
                 <constraint firstItem="X1c-aV-LhE" firstAttribute="width" secondItem="hJD-tj-MNn" secondAttribute="width" id="a7y-fi-dYG"/>
                 <constraint firstItem="Lpw-NV-EwQ" firstAttribute="leading" secondItem="98x-wC-nyX" secondAttribute="trailing" id="ae6-Su-OoA"/>
@@ -120,6 +120,7 @@
                 <constraint firstItem="98x-wC-nyX" firstAttribute="top" secondItem="twY-EL-rzk" secondAttribute="bottom" id="xcR-Ta-qLS"/>
                 <constraint firstItem="X1c-aV-LhE" firstAttribute="leading" secondItem="hJD-tj-MNn" secondAttribute="trailing" id="zPc-4q-DDS"/>
             </constraints>
+            <point key="canvasLocation" x="62.5" y="80.5"/>
         </view>
     </objects>
 </document>

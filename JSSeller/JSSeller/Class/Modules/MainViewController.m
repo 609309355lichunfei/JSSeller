@@ -10,13 +10,22 @@
 #import "ShopController.h"
 #import "MenuViewController.h"
 #import "HomeViewController.h"
+#import "JSLoginViewController.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIView *mainView;
 @property (weak, nonatomic) IBOutlet UIButton *menuManageBT;
+@property (weak, nonatomic) IBOutlet UIImageView *menuManageImageView;
+@property (weak, nonatomic) IBOutlet UILabel *menuManageLabel;
 @property (weak, nonatomic) IBOutlet UIButton *indentManageBT;
+@property (weak, nonatomic) IBOutlet UIImageView *indentManageImageView;
+@property (weak, nonatomic) IBOutlet UILabel *indentManageLabel;
 @property (weak, nonatomic) IBOutlet UIButton *storeCenterBT;
+@property (weak, nonatomic) IBOutlet UIImageView *storeCenterImageView;
+@property (weak, nonatomic) IBOutlet UILabel *storeCenterLabel;
 @property (strong, nonatomic) UIButton *currentBT;
+@property (strong, nonatomic) UIImageView *currentImageView;
+@property (strong, nonatomic) UILabel *currentLabel;
 @property (strong, nonatomic) UIViewController *currentVC;
 
 @property (strong, nonatomic) HomeViewController *homeVC;
@@ -32,16 +41,21 @@
     [self registUI];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+}
+
 - (void)registUI {
-    self.indentManageBT.layer.borderWidth = 0;
-    self.indentManageBT.layer.cornerRadius = 40;
-    self.indentManageBT.clipsToBounds = YES;
     self.homeVC = [[HomeViewController alloc]init];
     [self addChildViewController:self.homeVC];
     self.homeVC.view.frame = self.mainView.bounds;
     [self.mainView addSubview:self.homeVC.view];
     self.currentVC = self.homeVC;
     self.currentBT = self.indentManageBT;
+    self.currentImageView = self.indentManageImageView;
+    self.currentLabel = self.indentManageLabel;
+    self.currentImageView.highlighted = YES;
     
     self.menuVC = [[MenuViewController alloc]init];
     self.shopVC = [[ShopController alloc]init];
@@ -51,9 +65,13 @@
     if (_currentBT == self.menuManageBT) {
         return;
     }
-    [_currentBT setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    _currentImageView.highlighted = NO;
+    _currentLabel.textColor = UIColorFromRGB(0x999999);
     _currentBT = self.menuManageBT;
-    [_currentBT setTitleColor:RGB(254, 227, 10) forState:(UIControlStateNormal)];
+    _currentImageView = self.menuManageImageView;
+    _currentLabel = self.menuManageLabel;
+    _currentImageView.highlighted = YES;
+    _currentLabel.textColor = UIColorFromRGB(0x0795e7);
     [self replaceController:_currentVC newController:self.menuVC];
 }
 
@@ -61,9 +79,13 @@
     if (_currentBT == self.indentManageBT) {
         return;
     }
-    [_currentBT setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    _currentImageView.highlighted = NO;
+    _currentLabel.textColor = UIColorFromRGB(0x999999);
     _currentBT = self.indentManageBT;
-    [_currentBT setTitleColor:RGB(254, 227, 10) forState:(UIControlStateNormal)];
+    _currentImageView = self.indentManageImageView;
+    _currentLabel = self.indentManageLabel;
+    _currentImageView.highlighted = YES;
+    _currentLabel.textColor = UIColorFromRGB(0x0795e7);
     [self replaceController:_currentVC newController:self.homeVC];
 }
 
@@ -71,9 +93,13 @@
     if (_currentBT == self.storeCenterBT) {
         return;
     }
-    [_currentBT setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    _currentImageView.highlighted = NO;
+    _currentLabel.textColor = UIColorFromRGB(0x999999);
     _currentBT = self.storeCenterBT;
-    [_currentBT setTitleColor:RGB(254, 227, 10) forState:(UIControlStateNormal)];
+    _currentImageView = self.storeCenterImageView;
+    _currentLabel = self.storeCenterLabel;
+    _currentImageView.highlighted = YES;
+    _currentLabel.textColor = UIColorFromRGB(0x0795e7);
     [self replaceController:_currentVC newController:self.shopVC];
 }
 

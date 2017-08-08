@@ -26,9 +26,9 @@
 
 - (void)drawUI
 {
-    self.layer.borderColor = RGB(226, 226, 226).CGColor;
-    self.layer.borderWidth = 1;
-    self.layer.cornerRadius = 7;
+    self.layer.borderColor = UIColorFromRGB(0x0795e7).CGColor;
+    self.layer.borderWidth = 0.5;
+    self.layer.cornerRadius = 2;
     self.clipsToBounds = YES;
 }
 

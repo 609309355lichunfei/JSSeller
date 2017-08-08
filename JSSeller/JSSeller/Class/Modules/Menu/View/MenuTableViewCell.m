@@ -8,9 +8,15 @@
 
 #import "MenuTableViewCell.h"
 #import "MenuModel.h"
+#import "BorderLineButton.h"
 
 @interface MenuTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIView *editView;
+@property (weak, nonatomic) IBOutlet BorderLineButton *sellOutBT;
+@property (weak, nonatomic) IBOutlet BorderLineButton *soldOutBT;
+@property (weak, nonatomic) IBOutlet BorderLineButton *editBT;
+@property (weak, nonatomic) IBOutlet BorderLineButton *deleteBT;
+@property (weak, nonatomic) IBOutlet UIImageView *arrowImageView;
 
 @end
 
@@ -40,6 +46,7 @@
 - (void)setModel:(MenuModel *)model {
     _model = model;
     self.editView.hidden = !_model.option;
+    self.arrowImageView.highlighted = !self.editView.hidden;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

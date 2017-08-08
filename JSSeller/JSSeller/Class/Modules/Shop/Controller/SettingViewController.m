@@ -9,8 +9,10 @@
 #import "SettingViewController.h"
 #import "ShopEditViewController.h"
 #import "paymentAccountSettingViewController.h"
+#import "JSPassWordViewController.h"
 
 @interface SettingViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *logoutBT;
 
 @end
 
@@ -19,6 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self registUI];
+}
+
+- (void)registUI {
+    self.logoutBT.layer.cornerRadius = 5;
+    self.logoutBT.clipsToBounds = YES;
 }
 
 - (IBAction)backAction:(id)sender {
@@ -31,8 +39,8 @@
 }
 
 - (IBAction)passwordSettingAction:(id)sender {
-    paymentAccountSettingViewController *paymentSettingVC = [[paymentAccountSettingViewController alloc]init];
-    [self.navigationController pushViewController:paymentSettingVC animated:YES];
+    JSPassWordViewController *passwordVC = [[JSPassWordViewController alloc] init];
+    [self.navigationController pushViewController:passwordVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

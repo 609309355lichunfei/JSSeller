@@ -11,11 +11,22 @@
 
 @interface TurnoverViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIView *changeTitleSelectView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *todayTitleLabel;
-@property (weak, nonatomic) IBOutlet UIView *changeYearView;
-@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UILabel *weakCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *weakTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *monthCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *monthTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearTitleLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *yearsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *monthLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dayLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *yearViewWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *dateChooseViewHeight;
+
+
+@property (strong, nonatomic) UILabel *currentCountLabel;
+@property (strong, nonatomic) UILabel *currentTitleLabel;
 
 @end
 
@@ -29,61 +40,61 @@
 
 - (void)registUI {
     [self.tableView registerNib:[UINib nibWithNibName:@"TurnoverTableViewCell" bundle:nil] forCellReuseIdentifier:@"TurnoverTableViewCell"];
+    _currentCountLabel = self.weakCountLabel;
+    _currentTitleLabel = self.weakTitleLabel;
+    self.dateChooseViewHeight.constant = 0;
+    self.yearViewWidth.constant = KScreenWidth / 3;
 }
 
-- (IBAction)changeTitleAction:(id)sender {
-    _changeTitleSelectView.hidden = !_changeTitleSelectView.isHidden;
-
-}
-
-- (IBAction)changeYearsAction:(id)sender {
-    
-}
 
 - (IBAction)backAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (IBAction)todayTurnoverAction:(id)sender {
-    self.changeTitleSelectView.hidden = YES;
-    if ([self.titleLabel.text isEqualToString:@"今日营业额"]) {
-        return;
-    }
-    self.titleLabel.text = @"今日营业额";
-    self.todayTitleLabel.text = @"今日营业额:";
-    self.changeYearView.hidden = YES;
-}
 - (IBAction)weakTurnoverAction:(id)sender {
-    self.changeTitleSelectView.hidden = YES;
-    if ([self.titleLabel.text isEqualToString:@"本周营业额"]) {
+    if (_currentCountLabel == self.weakCountLabel) {
         return;
     }
-    self.titleLabel.text = @"本周营业额";
-    self.todayTitleLabel.text = @"今日营业额:";
-    self.changeYearView.hidden = YES;
+    self.dateChooseViewHeight.constant = 0;
+    _currentCountLabel.textColor = UIColorFromRGB(0x333333);
+    _currentTitleLabel.textColor = UIColorFromRGB(0x666666);
+    _currentCountLabel = self.weakCountLabel;
+    _currentTitleLabel = self.weakTitleLabel;
+    _currentCountLabel.textColor = UIColorFromRGB(0x0490e6);
+    _currentTitleLabel.textColor = UIColorFromRGB(0x0490e6);
 }
+
 - (IBAction)monthTurnoverAction:(id)sender {
-    self.changeTitleSelectView.hidden = YES;
-    if ([self.titleLabel.text isEqualToString:@"本月营业额"]) {
+    if (_currentCountLabel == self.monthCountLabel) {
         return;
     }
-    self.titleLabel.text = @"本月营业额";
-    self.todayTitleLabel.text = @"今日营业额:";
-    self.changeYearView.hidden = YES;
+    self.dateChooseViewHeight.constant = 50;
+    self.yearViewWidth.constant = 0;
+    _currentCountLabel.textColor = UIColorFromRGB(0x333333);
+    _currentTitleLabel.textColor = UIColorFromRGB(0x666666);
+    _currentCountLabel = self.monthCountLabel;
+    _currentTitleLabel = self.monthTitleLabel;
+    _currentCountLabel.textColor = UIColorFromRGB(0x0490e6);
+    _currentTitleLabel.textColor = UIColorFromRGB(0x0490e6);
 }
+
 - (IBAction)totalTapAction:(id)sender {
-    self.changeTitleSelectView.hidden = YES;
-    if ([self.titleLabel.text isEqualToString:@"总营业额"]) {
+    if (_currentCountLabel == self.yearCountLabel) {
         return;
     }
-    self.titleLabel.text = @"总营业额";
-    self.todayTitleLabel.text = @"历史营业额:";
-    self.changeYearView.hidden = NO;
+    self.dateChooseViewHeight.constant = 50;
+    self.yearViewWidth.constant = KScreenWidth / 3;
+    _currentCountLabel.textColor = UIColorFromRGB(0x333333);
+    _currentTitleLabel.textColor = UIColorFromRGB(0x666666);
+    _currentCountLabel = self.yearCountLabel;
+    _currentTitleLabel = self.yearTitleLabel;
+    _currentCountLabel.textColor = UIColorFromRGB(0x0490e6);
+    _currentTitleLabel.textColor = UIColorFromRGB(0x0490e6);
 }
 
 #pragma mark - UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 290;
+    return 264;
 }
 
 

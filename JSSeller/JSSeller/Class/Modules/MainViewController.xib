@@ -6,16 +6,21 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="indentManageBT" destination="Tfl-eK-kW6" id="pkp-oK-069"/>
+                <outlet property="indentManageImageView" destination="uaB-73-LI2" id="fb5-1t-nlQ"/>
+                <outlet property="indentManageLabel" destination="i8F-7X-yaH" id="T7f-FA-FdS"/>
                 <outlet property="mainView" destination="ZQd-Q0-Axb" id="jya-fZ-kuV"/>
                 <outlet property="menuManageBT" destination="dob-hd-fcu" id="sKh-kB-EbH"/>
+                <outlet property="menuManageImageView" destination="ac4-Y8-Azd" id="iqK-tf-eX0"/>
+                <outlet property="menuManageLabel" destination="ud8-2x-u7Y" id="Ke4-tU-2V0"/>
                 <outlet property="storeCenterBT" destination="BeD-iN-GLh" id="gtG-uc-Vmf"/>
+                <outlet property="storeCenterImageView" destination="Os3-0e-b4e" id="SN7-W4-9th"/>
+                <outlet property="storeCenterLabel" destination="UUm-qD-gs8" id="JsZ-3f-wwj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,72 +30,152 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQd-Q0-Axb">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="616"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NID-im-0nO">
-                    <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                    <rect key="frame" x="0.0" y="616" width="375" height="51"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUu-jp-oA3">
-                            <rect key="frame" x="148" y="36" width="78" height="44"/>
-                            <color key="backgroundColor" red="0.062745098040000002" green="0.49803921569999998" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="44" id="MTu-Td-urU"/>
-                                <constraint firstAttribute="width" constant="78" id="sNn-U4-IuM"/>
-                            </constraints>
-                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dob-hd-fcu">
-                            <rect key="frame" x="0.0" y="36" width="148.5" height="44"/>
-                            <color key="backgroundColor" red="0.062745098040000002" green="0.49803921569999998" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <rect key="frame" x="0.0" y="0.0" width="125" height="51"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="JK4-39-npA"/>
+                                <constraint firstAttribute="height" constant="51" id="JK4-39-npA"/>
                             </constraints>
-                            <state key="normal" title="菜单管理">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="menuManagerAction:" destination="-1" eventType="touchUpInside" id="yEL-Vo-J59"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeD-iN-GLh">
-                            <rect key="frame" x="226.5" y="36" width="148.5" height="44"/>
-                            <color key="backgroundColor" red="0.062745098040000002" green="0.49803921569999998" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeD-iN-GLh">
+                            <rect key="frame" x="250" y="0.0" width="125" height="51"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="so7-Sa-bjt"/>
+                                <constraint firstAttribute="height" constant="51" id="so7-Sa-bjt"/>
                             </constraints>
-                            <state key="normal" title="店铺中心">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="storeCender:" destination="-1" eventType="touchUpInside" id="pXQ-hS-ncl"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-eK-kW6">
-                            <rect key="frame" x="147.5" y="0.0" width="80" height="80"/>
-                            <color key="backgroundColor" red="0.12549019607843137" green="0.92549019607843142" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaa-n8-VL7">
+                            <rect key="frame" x="287.5" y="0.0" width="50" height="51"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="底部栏按钮店铺中心默认" highlightedImage="底部栏按钮店铺中心点击" translatesAutoresizingMaskIntoConstraints="NO" id="Os3-0e-b4e">
+                                    <rect key="frame" x="17" y="3.5" width="16" height="19"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="19" id="7FD-Ak-jxr"/>
+                                        <constraint firstAttribute="width" constant="16" id="gXy-6S-HBt"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺中心" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUm-qD-gs8">
+                                    <rect key="frame" x="3" y="30.5" width="44" height="15.5"/>
+                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="11"/>
+                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="80" id="bqx-jC-zXx"/>
-                                <constraint firstAttribute="width" secondItem="Tfl-eK-kW6" secondAttribute="height" id="eam-jh-eLC"/>
+                                <constraint firstItem="UUm-qD-gs8" firstAttribute="centerX" secondItem="qaa-n8-VL7" secondAttribute="centerX" id="5a9-2j-0a8"/>
+                                <constraint firstAttribute="width" constant="50" id="GDv-To-P9T"/>
+                                <constraint firstItem="Os3-0e-b4e" firstAttribute="centerX" secondItem="qaa-n8-VL7" secondAttribute="centerX" id="Hjj-Ii-kpv"/>
+                                <constraint firstAttribute="bottom" secondItem="UUm-qD-gs8" secondAttribute="bottom" constant="5" id="NLg-PM-D1t"/>
+                                <constraint firstItem="UUm-qD-gs8" firstAttribute="top" secondItem="Os3-0e-b4e" secondAttribute="bottom" constant="8" id="X1h-O3-Onf"/>
                             </constraints>
-                            <state key="normal" title="订单处理">
-                                <color key="titleColor" red="0.99607843137254903" green="0.8901960784313725" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-eK-kW6">
+                            <rect key="frame" x="125" y="0.0" width="125" height="51"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.027450980392156862" green="0.58431372549019611" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="indentManageAction:" destination="-1" eventType="touchUpInside" id="KWU-MQ-Hl2"/>
                             </connections>
                         </button>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwp-VF-yTl">
+                            <rect key="frame" x="162.5" y="0.0" width="50" height="51"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="底部栏按钮订单处理默认" highlightedImage="底部栏按钮订单点击" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uaB-73-LI2">
+                                    <rect key="frame" x="17" y="3.5" width="16" height="19"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="19" id="OXz-xW-X0I"/>
+                                        <constraint firstAttribute="width" constant="16" id="T6p-OL-3Ku"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单处理" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8F-7X-yaH">
+                                    <rect key="frame" x="3" y="30.5" width="44" height="15.5"/>
+                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="11"/>
+                                    <color key="textColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="uaB-73-LI2" firstAttribute="centerX" secondItem="Vwp-VF-yTl" secondAttribute="centerX" id="BXV-Fe-ygO"/>
+                                <constraint firstAttribute="width" constant="50" id="HMB-xE-teh"/>
+                                <constraint firstItem="i8F-7X-yaH" firstAttribute="centerX" secondItem="Vwp-VF-yTl" secondAttribute="centerX" id="R5x-kw-EwE"/>
+                                <constraint firstAttribute="bottom" secondItem="i8F-7X-yaH" secondAttribute="bottom" constant="5" id="X4S-KJ-Mpd"/>
+                                <constraint firstItem="i8F-7X-yaH" firstAttribute="top" secondItem="uaB-73-LI2" secondAttribute="bottom" constant="8" id="Z3P-ac-oa7"/>
+                            </constraints>
+                        </view>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nci-DO-9eg">
+                            <rect key="frame" x="37.5" y="0.0" width="50" height="51"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="底部栏按钮菜单默认" highlightedImage="底部栏按钮菜单管理点击" translatesAutoresizingMaskIntoConstraints="NO" id="ac4-Y8-Azd">
+                                    <rect key="frame" x="17" y="3.5" width="16" height="19"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="16" id="2vf-3e-8iv"/>
+                                        <constraint firstAttribute="height" constant="19" id="FFC-Jf-i3b"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="菜单管理" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud8-2x-u7Y">
+                                    <rect key="frame" x="3" y="30.5" width="44" height="15.5"/>
+                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="11"/>
+                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ud8-2x-u7Y" secondAttribute="bottom" constant="5" id="5ti-Np-PvI"/>
+                                <constraint firstAttribute="width" constant="50" id="Ieb-2U-xap"/>
+                                <constraint firstItem="ud8-2x-u7Y" firstAttribute="centerX" secondItem="Nci-DO-9eg" secondAttribute="centerX" id="dLG-Q2-40R"/>
+                                <constraint firstItem="ud8-2x-u7Y" firstAttribute="top" secondItem="ac4-Y8-Azd" secondAttribute="bottom" constant="8" id="vQb-QI-2BX"/>
+                                <constraint firstItem="ac4-Y8-Azd" firstAttribute="centerX" secondItem="Nci-DO-9eg" secondAttribute="centerX" id="xiX-1d-sti"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.88719951919999995" green="0.88719951919999995" blue="0.88719951919999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="BeD-iN-GLh" secondAttribute="trailing" id="5WG-oE-fiZ"/>
-                        <constraint firstAttribute="bottom" secondItem="IUu-jp-oA3" secondAttribute="bottom" id="8Jq-Gj-OsA"/>
+                        <constraint firstItem="Vwp-VF-yTl" firstAttribute="centerX" secondItem="Tfl-eK-kW6" secondAttribute="centerX" id="78p-3Z-8SO"/>
+                        <constraint firstItem="BeD-iN-GLh" firstAttribute="leading" secondItem="Tfl-eK-kW6" secondAttribute="trailing" id="830-oP-DSU"/>
+                        <constraint firstItem="Tfl-eK-kW6" firstAttribute="top" secondItem="NID-im-0nO" secondAttribute="top" id="96K-BK-Yn3"/>
+                        <constraint firstItem="Nci-DO-9eg" firstAttribute="centerX" secondItem="dob-hd-fcu" secondAttribute="centerX" id="AWl-TX-Nyy"/>
+                        <constraint firstItem="Vwp-VF-yTl" firstAttribute="centerY" secondItem="Tfl-eK-kW6" secondAttribute="centerY" id="AbC-oT-pVy"/>
+                        <constraint firstItem="qaa-n8-VL7" firstAttribute="centerX" secondItem="BeD-iN-GLh" secondAttribute="centerX" id="Dvp-xM-u6w"/>
                         <constraint firstAttribute="bottom" secondItem="dob-hd-fcu" secondAttribute="bottom" id="EDw-Sx-OpA"/>
-                        <constraint firstItem="BeD-iN-GLh" firstAttribute="leading" secondItem="IUu-jp-oA3" secondAttribute="trailing" id="JMj-T0-EeB"/>
-                        <constraint firstAttribute="height" constant="80" id="VKx-vX-lHv"/>
+                        <constraint firstItem="Tfl-eK-kW6" firstAttribute="width" secondItem="dob-hd-fcu" secondAttribute="width" id="FZa-NL-G3z"/>
+                        <constraint firstItem="Nci-DO-9eg" firstAttribute="height" secondItem="dob-hd-fcu" secondAttribute="height" id="MeR-0C-Vee"/>
+                        <constraint firstItem="Tfl-eK-kW6" firstAttribute="leading" secondItem="dob-hd-fcu" secondAttribute="trailing" id="Mf1-bQ-8ZF"/>
+                        <constraint firstAttribute="height" constant="51" id="VKx-vX-lHv"/>
+                        <constraint firstItem="Vwp-VF-yTl" firstAttribute="height" secondItem="Tfl-eK-kW6" secondAttribute="height" id="d1m-Sw-6JO"/>
                         <constraint firstItem="dob-hd-fcu" firstAttribute="leading" secondItem="NID-im-0nO" secondAttribute="leading" id="fRX-2X-cr1"/>
+                        <constraint firstItem="Nci-DO-9eg" firstAttribute="centerY" secondItem="dob-hd-fcu" secondAttribute="centerY" id="gj0-a4-48e"/>
+                        <constraint firstItem="qaa-n8-VL7" firstAttribute="centerY" secondItem="BeD-iN-GLh" secondAttribute="centerY" id="hwj-TC-kX0"/>
                         <constraint firstItem="BeD-iN-GLh" firstAttribute="width" secondItem="dob-hd-fcu" secondAttribute="width" id="pgV-rq-2zk"/>
+                        <constraint firstItem="qaa-n8-VL7" firstAttribute="height" secondItem="BeD-iN-GLh" secondAttribute="height" id="w7G-aC-DAb"/>
+                        <constraint firstAttribute="bottom" secondItem="Tfl-eK-kW6" secondAttribute="bottom" id="wKg-tk-htM"/>
                         <constraint firstItem="Tfl-eK-kW6" firstAttribute="centerY" secondItem="NID-im-0nO" secondAttribute="centerY" id="x2M-lc-6tG"/>
-                        <constraint firstItem="IUu-jp-oA3" firstAttribute="leading" secondItem="dob-hd-fcu" secondAttribute="trailing" id="xGH-jD-f3w"/>
                         <constraint firstAttribute="bottom" secondItem="BeD-iN-GLh" secondAttribute="bottom" id="zX5-YG-Yy2"/>
                         <constraint firstItem="Tfl-eK-kW6" firstAttribute="centerX" secondItem="NID-im-0nO" secondAttribute="centerX" id="zsE-5S-K6X"/>
                     </constraints>
@@ -109,4 +194,12 @@
             <point key="canvasLocation" x="32.5" y="65.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="底部栏按钮店铺中心点击" width="20" height="18"/>
+        <image name="底部栏按钮店铺中心默认" width="20" height="18"/>
+        <image name="底部栏按钮菜单管理点击" width="19" height="16"/>
+        <image name="底部栏按钮菜单默认" width="19" height="16"/>
+        <image name="底部栏按钮订单处理默认" width="16" height="19"/>
+        <image name="底部栏按钮订单点击" width="16" height="19"/>
+    </resources>
 </document>

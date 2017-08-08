@@ -44,6 +44,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeTableviewCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TurnoverCellTableViewCell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.backgroundColor = UIColorFromRGB(0xdddddd);
     return cell;
 }
 

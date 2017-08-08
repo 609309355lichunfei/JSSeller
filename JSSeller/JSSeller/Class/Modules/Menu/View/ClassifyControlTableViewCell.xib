@@ -16,23 +16,20 @@
             <rect key="frame" x="0.0" y="0.0" width="351" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="351" height="87.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="351" height="87"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVg-39-7da">
                         <rect key="frame" x="0.0" y="1" width="351" height="50"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="前菜" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Md7-f1-POk">
-                                <rect key="frame" x="8" y="16.5" width="289" height="17"/>
-                                <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="8" y="14.5" width="289" height="21"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KWT-EU-J9z">
-                                <rect key="frame" x="319" y="0.0" width="32" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="4rV-ho-Fq8"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightarrow" translatesAutoresizingMaskIntoConstraints="NO" id="KWT-EU-J9z">
+                                <rect key="frame" x="331" y="0.0" width="8" height="50"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,54 +40,50 @@
                             <constraint firstAttribute="bottom" secondItem="KWT-EU-J9z" secondAttribute="bottom" id="dk8-BJ-F4e"/>
                             <constraint firstAttribute="trailing" secondItem="Md7-f1-POk" secondAttribute="trailing" constant="54" id="grf-lA-ywc"/>
                             <constraint firstItem="Md7-f1-POk" firstAttribute="leading" secondItem="kVg-39-7da" secondAttribute="leading" constant="8" id="pTY-YW-ksK"/>
-                            <constraint firstAttribute="trailing" secondItem="KWT-EU-J9z" secondAttribute="trailing" id="tA8-QG-FQH"/>
+                            <constraint firstAttribute="trailing" secondItem="KWT-EU-J9z" secondAttribute="trailing" constant="12" id="tA8-QG-FQH"/>
                         </constraints>
                     </view>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIX-QZ-RE1">
                         <rect key="frame" x="0.0" y="51" width="351" height="40"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBy-c0-99I">
-                                <rect key="frame" x="125.5" y="0.0" width="100" height="40"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcR-9t-YAZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
-                                        <state key="normal" title="编辑">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="editAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rjT-9p-DjG"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25b-SL-6Dk">
-                                        <rect key="frame" x="50" y="0.0" width="50" height="40"/>
-                                        <state key="normal" title="删除">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="deleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZyL-Vm-lkL"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25b-SL-6Dk" customClass="BorderLineButton">
+                                <rect key="frame" x="282" y="9" width="50" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="25b-SL-6Dk" firstAttribute="width" secondItem="GcR-9t-YAZ" secondAttribute="width" id="16g-2K-igT"/>
-                                    <constraint firstAttribute="trailing" secondItem="25b-SL-6Dk" secondAttribute="trailing" id="Cvz-2a-t6l"/>
-                                    <constraint firstAttribute="width" constant="100" id="QS8-Z5-pZ6"/>
-                                    <constraint firstAttribute="bottom" secondItem="25b-SL-6Dk" secondAttribute="bottom" id="SZ0-Bp-moh"/>
-                                    <constraint firstItem="GcR-9t-YAZ" firstAttribute="top" secondItem="xBy-c0-99I" secondAttribute="top" id="kGn-VN-ikD"/>
-                                    <constraint firstItem="25b-SL-6Dk" firstAttribute="top" secondItem="xBy-c0-99I" secondAttribute="top" id="kaQ-x2-sBs"/>
-                                    <constraint firstItem="25b-SL-6Dk" firstAttribute="leading" secondItem="GcR-9t-YAZ" secondAttribute="trailing" id="np3-SB-Otr"/>
-                                    <constraint firstAttribute="bottom" secondItem="GcR-9t-YAZ" secondAttribute="bottom" id="peB-RU-LM7"/>
-                                    <constraint firstItem="GcR-9t-YAZ" firstAttribute="leading" secondItem="xBy-c0-99I" secondAttribute="leading" id="slI-k6-nZg"/>
+                                    <constraint firstAttribute="height" constant="22" id="Dzs-fu-9sm"/>
                                 </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                                <state key="normal" title="删除">
+                                    <color key="titleColor" red="0.015686274510000001" green="0.56470588239999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZyL-Vm-lkL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcR-9t-YAZ" customClass="BorderLineButton">
+                                <rect key="frame" x="224" y="9" width="50" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Iaa-yD-gbW"/>
+                                    <constraint firstAttribute="width" constant="50" id="xj5-aN-rlY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                                <state key="normal" title="编辑">
+                                    <color key="titleColor" red="0.015686274510000001" green="0.56470588239999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="editAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rjT-9p-DjG"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.51328125000000002" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="4BW-SX-oI0"/>
-                            <constraint firstItem="xBy-c0-99I" firstAttribute="centerX" secondItem="dIX-QZ-RE1" secondAttribute="centerX" id="SBq-uh-RdA"/>
-                            <constraint firstItem="xBy-c0-99I" firstAttribute="top" secondItem="dIX-QZ-RE1" secondAttribute="top" id="jgd-hM-1wY"/>
-                            <constraint firstAttribute="bottom" secondItem="xBy-c0-99I" secondAttribute="bottom" id="u2r-jh-fG9"/>
+                            <constraint firstItem="25b-SL-6Dk" firstAttribute="centerY" secondItem="dIX-QZ-RE1" secondAttribute="centerY" id="Dw3-E9-c5s"/>
+                            <constraint firstItem="25b-SL-6Dk" firstAttribute="width" secondItem="GcR-9t-YAZ" secondAttribute="width" id="Rt4-2S-hNU"/>
+                            <constraint firstAttribute="trailing" secondItem="25b-SL-6Dk" secondAttribute="trailing" constant="19" id="S3R-d0-N8N"/>
+                            <constraint firstItem="25b-SL-6Dk" firstAttribute="leading" secondItem="GcR-9t-YAZ" secondAttribute="trailing" constant="8" id="a4d-O0-eOy"/>
+                            <constraint firstItem="GcR-9t-YAZ" firstAttribute="centerY" secondItem="25b-SL-6Dk" secondAttribute="centerY" id="djt-2M-LvS"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZJ-hU-3Ex">
@@ -120,4 +113,7 @@
             <point key="canvasLocation" x="47.5" y="87"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="rightarrow" width="8" height="15"/>
+    </resources>
 </document>

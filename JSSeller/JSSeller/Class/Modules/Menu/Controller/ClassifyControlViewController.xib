@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,7 +26,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="xwp-y8-Rfq"/>
                     </constraints>
-                    <color key="barTintColor" red="0.062745098040000002" green="0.49803921569999998" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.015686274510000001" green="0.56470588239999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,7 +34,7 @@
                     </textAttributes>
                     <items>
                         <navigationItem title="分类管理" id="qBk-hP-65p">
-                            <barButtonItem key="leftBarButtonItem" title="back" id="e1d-YO-Q1w">
+                            <barButtonItem key="leftBarButtonItem" image="返回" id="e1d-YO-Q1w">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="backAction:" destination="-1" id="UiA-1s-qRp"/>
@@ -43,27 +44,37 @@
                     </items>
                 </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnc-Bs-8yS">
-                    <rect key="frame" x="4" y="68" width="367" height="30"/>
+                    <rect key="frame" x="4" y="68" width="367" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbQ-zf-m5H">
-                            <rect key="frame" x="152" y="0.0" width="62" height="30"/>
-                            <state key="normal" title="新增分类">
-                                <color key="titleColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                            <rect key="frame" x="302" y="4.5" width="53" height="31"/>
+                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
+                            <state key="normal" title="添加分类">
+                                <color key="titleColor" red="1" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="addAction:" destination="-1" eventType="touchUpInside" id="8gH-Wa-pra"/>
                             </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="添加" translatesAutoresizingMaskIntoConstraints="NO" id="GOm-EN-C92">
+                            <rect key="frame" x="287" y="15" width="10" height="10"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="10" id="HsO-9S-PVq"/>
+                                <constraint firstAttribute="width" secondItem="GOm-EN-C92" secondAttribute="height" id="QIq-mC-pmW"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="8bQ-tV-98p"/>
+                        <constraint firstAttribute="height" constant="40" id="8bQ-tV-98p"/>
+                        <constraint firstItem="GOm-EN-C92" firstAttribute="centerY" secondItem="AbQ-zf-m5H" secondAttribute="centerY" id="Hw1-gw-Vcp"/>
                         <constraint firstItem="AbQ-zf-m5H" firstAttribute="centerY" secondItem="Wnc-Bs-8yS" secondAttribute="centerY" id="JWr-49-NDH"/>
-                        <constraint firstItem="AbQ-zf-m5H" firstAttribute="centerX" secondItem="Wnc-Bs-8yS" secondAttribute="centerX" id="RUP-8v-AZy"/>
+                        <constraint firstAttribute="trailing" secondItem="AbQ-zf-m5H" secondAttribute="trailing" constant="12" id="Ov4-44-1Zi"/>
+                        <constraint firstItem="AbQ-zf-m5H" firstAttribute="leading" secondItem="GOm-EN-C92" secondAttribute="trailing" constant="5" id="jNa-Lh-YsZ"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-X1-A6o">
-                    <rect key="frame" x="4" y="102" width="367" height="561"/>
+                    <rect key="frame" x="4" y="112" width="367" height="551"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="tJF-ks-U4Y"/>
@@ -86,4 +97,8 @@
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="添加" width="10" height="9"/>
+        <image name="返回" width="12" height="21"/>
+    </resources>
 </document>

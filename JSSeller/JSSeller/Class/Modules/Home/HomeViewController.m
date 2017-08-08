@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *completedBT;
 @property (weak, nonatomic) IBOutlet UIButton *exceptionBT;
 
+@property (strong, nonatomic) UIView *signView;
+
 @property (assign, nonatomic) HomeTableViewCellType type;
 
 @property (strong, nonatomic) UIButton *currentBT;
@@ -30,7 +32,20 @@
     [self registUI];
 }
 
+- (void)viewDidLayoutSubviews {
+    NSInteger signViewWidth = 50;
+    if (_currentBT == _exceptionBT) {
+        signViewWidth = 65;
+    }
+    self.signView.width = signViewWidth;
+    self.signView.center = CGPointMake(self.currentBT.centerX, self.currentBT.centerY + 10);
+    
+}
+
 - (void)registUI {
+    self.signView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 2)];
+    self.signView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.signView];
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"HomeTableViewCell"];
     _currentBT = _xinBT;
     _type = HomeTableViewCellTypeAwait;
@@ -41,9 +56,9 @@
         return;
     }
     _type = HomeTableViewCellTypeAwait;
-    [_currentBT setTitleColor:RGB(120, 120, 120) forState:(UIControlStateNormal)];
+    _currentBT.titleLabel.font = [UIFont systemFontOfSize:15];
     _currentBT = _xinBT;
-    [_currentBT setTitleColor:RGB(253, 150, 31) forState:(UIControlStateNormal)];
+    _currentBT.titleLabel.font = [UIFont systemFontOfSize:16];
     [self.tableView reloadData];
 
 }
@@ -53,9 +68,9 @@
         return;
     }
     _type = HomeTableViewCellTypeAccept;
-    [_currentBT setTitleColor:RGB(120, 120, 120) forState:(UIControlStateNormal)];
+    _currentBT.titleLabel.font = [UIFont systemFontOfSize:15];
     _currentBT = _acceptedBT;
-    [_currentBT setTitleColor:RGB(253, 150, 31) forState:(UIControlStateNormal)];
+    _currentBT.titleLabel.font = [UIFont systemFontOfSize:16];
     [self.tableView reloadData];
 
 }
@@ -65,9 +80,9 @@
         return;
     }
     _type = HomeTableViewCellTypeComplete;
-    [_currentBT setTitleColor:RGB(120, 120, 120) forState:(UIControlStateNormal)];
+    _currentBT.titleLabel.font = [UIFont systemFontOfSize:15];
     _currentBT = _completedBT;
-    [_currentBT setTitleColor:RGB(253, 150, 31) forState:(UIControlStateNormal)];
+    _currentBT.titleLabel.font = [UIFont systemFontOfSize:16];
     [self.tableView reloadData];
 }
 
@@ -76,16 +91,16 @@
         return;
     }
     _type = HomeTableViewCellTypeException;
-    [_currentBT setTitleColor:RGB(120, 120, 120) forState:(UIControlStateNormal)];
+    _currentBT.titleLabel.font = [UIFont systemFontOfSize:15];
     _currentBT = _exceptionBT;
-    [_currentBT setTitleColor:RGB(253, 150, 31) forState:(UIControlStateNormal)];
+    _currentBT.titleLabel.font = [UIFont systemFontOfSize:16];
     [self.tableView reloadData];
 
 }
 
 #pragma mark - UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 290;
+    return 413.5;
 }
 
 

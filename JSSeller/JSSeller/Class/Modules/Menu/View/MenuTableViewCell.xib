@@ -16,43 +16,17 @@
             <rect key="frame" x="0.0" y="0.0" width="405" height="94"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="405" height="93.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="405" height="93"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="box-yA-Lr7">
-                        <rect key="frame" x="0.0" y="1" width="405" height="50"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="dtw-76-LvH">
-                                <rect key="frame" x="8" y="8" width="46" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="vNj-75-J0j"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="咖喱面包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbv-gV-UJg">
-                                <rect key="frame" x="62" y="17" width="53.5" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="dtw-76-LvH" firstAttribute="leading" secondItem="box-yA-Lr7" secondAttribute="leading" constant="8" id="8q7-Ai-UYa"/>
-                            <constraint firstItem="vbv-gV-UJg" firstAttribute="leading" secondItem="dtw-76-LvH" secondAttribute="trailing" constant="8" id="A1w-BJ-CLy"/>
-                            <constraint firstAttribute="height" constant="50" id="JEM-Hf-7h7"/>
-                            <constraint firstAttribute="bottom" secondItem="dtw-76-LvH" secondAttribute="bottom" constant="8" id="h8k-JV-FdD"/>
-                            <constraint firstItem="vbv-gV-UJg" firstAttribute="centerY" secondItem="dtw-76-LvH" secondAttribute="centerY" id="rf3-5s-qiG"/>
-                            <constraint firstItem="dtw-76-LvH" firstAttribute="top" secondItem="box-yA-Lr7" secondAttribute="top" constant="8" id="vte-zO-b7D"/>
-                        </constraints>
-                    </view>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2IH-qh-PAf">
                         <rect key="frame" x="0.0" y="51" width="405" height="40"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnS-ek-hfR">
-                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="40"/>
+                                <rect key="frame" x="100" y="0.0" width="76.5" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="401-EF-0xh" customClass="BorderLineButton">
-                                        <rect key="frame" x="28.5" y="8.5" width="45" height="23"/>
+                                        <rect key="frame" x="16" y="8.5" width="45" height="23"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="FyN-AQ-hoD"/>
@@ -60,7 +34,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="售罄">
-                                            <color key="titleColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.015686274510000001" green="0.56470588239999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="sellOutAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Uuy-No-uwn"/>
@@ -74,10 +48,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCL-27-T0E">
-                                <rect key="frame" x="101.5" y="0.0" width="101" height="40"/>
+                                <rect key="frame" x="176.5" y="0.0" width="76" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5A-bo-Hks" customClass="BorderLineButton">
-                                        <rect key="frame" x="27.5" y="8" width="45" height="23"/>
+                                        <rect key="frame" x="15" y="8" width="45" height="23"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="DQq-J9-Nzf"/>
@@ -85,7 +59,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="下架">
-                                            <color key="titleColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.015686274510000001" green="0.56470588239999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="soldOut:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wdt-rX-tMB"/>
@@ -99,10 +73,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJk-2e-KTQ">
-                                <rect key="frame" x="202.5" y="0.0" width="101.5" height="40"/>
+                                <rect key="frame" x="252.5" y="0.0" width="76.5" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdV-cD-exe" customClass="BorderLineButton">
-                                        <rect key="frame" x="27.5" y="8" width="45" height="23"/>
+                                        <rect key="frame" x="15" y="8" width="45" height="23"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="rnI-77-3XU"/>
@@ -110,7 +84,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="编辑">
-                                            <color key="titleColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.015686274510000001" green="0.56470588239999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="editAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Pod-bv-n3S"/>
@@ -124,10 +98,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtc-0s-zVa">
-                                <rect key="frame" x="304" y="0.0" width="101" height="40"/>
+                                <rect key="frame" x="329" y="0.0" width="76" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goo-Br-ke0" customClass="BorderLineButton">
-                                        <rect key="frame" x="28" y="8" width="45" height="23"/>
+                                        <rect key="frame" x="15.5" y="8" width="45" height="23"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="CBy-GF-9Ja"/>
@@ -135,7 +109,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="删除">
-                                            <color key="titleColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.015686274510000001" green="0.56470588239999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="deleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sSs-VA-6zk"/>
@@ -149,7 +123,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.51328125000000002" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="0.51328125000000002" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LJk-2e-KTQ" firstAttribute="top" secondItem="2IH-qh-PAf" secondAttribute="top" id="0SL-hg-pwO"/>
                             <constraint firstAttribute="height" constant="40" id="HkX-D2-dY2"/>
@@ -157,7 +131,7 @@
                             <constraint firstAttribute="bottom" secondItem="fnS-ek-hfR" secondAttribute="bottom" id="Plt-KW-xvj"/>
                             <constraint firstItem="rtc-0s-zVa" firstAttribute="width" secondItem="LJk-2e-KTQ" secondAttribute="width" id="UcN-4F-2oi"/>
                             <constraint firstItem="rtc-0s-zVa" firstAttribute="leading" secondItem="LJk-2e-KTQ" secondAttribute="trailing" id="Uf9-YG-agJ"/>
-                            <constraint firstItem="fnS-ek-hfR" firstAttribute="leading" secondItem="2IH-qh-PAf" secondAttribute="leading" id="WbH-i5-D7k"/>
+                            <constraint firstItem="fnS-ek-hfR" firstAttribute="leading" secondItem="2IH-qh-PAf" secondAttribute="leading" constant="100" id="WbH-i5-D7k"/>
                             <constraint firstAttribute="bottom" secondItem="LJk-2e-KTQ" secondAttribute="bottom" id="aNx-qD-WAZ"/>
                             <constraint firstAttribute="bottom" secondItem="rtc-0s-zVa" secondAttribute="bottom" id="dX8-UW-cTV"/>
                             <constraint firstItem="iCL-27-T0E" firstAttribute="width" secondItem="fnS-ek-hfR" secondAttribute="width" id="e1t-ZY-Z56"/>
@@ -168,6 +142,38 @@
                             <constraint firstItem="iCL-27-T0E" firstAttribute="top" secondItem="2IH-qh-PAf" secondAttribute="top" id="un6-Xm-p8x"/>
                             <constraint firstItem="fnS-ek-hfR" firstAttribute="top" secondItem="2IH-qh-PAf" secondAttribute="top" id="v8r-2U-Tte"/>
                             <constraint firstItem="iCL-27-T0E" firstAttribute="leading" secondItem="fnS-ek-hfR" secondAttribute="trailing" id="ydp-5i-50o"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="box-yA-Lr7">
+                        <rect key="frame" x="0.0" y="1" width="405" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="dtw-76-LvH">
+                                <rect key="frame" x="8" y="8" width="46" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="vNj-75-J0j"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="咖喱面包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbv-gV-UJg">
+                                <rect key="frame" x="62" y="15" width="60" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightarrow" highlightedImage="下拉按钮" translatesAutoresizingMaskIntoConstraints="NO" id="ySK-xO-pRG">
+                                <rect key="frame" x="385" y="0.0" width="8" height="50"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dtw-76-LvH" firstAttribute="leading" secondItem="box-yA-Lr7" secondAttribute="leading" constant="8" id="8q7-Ai-UYa"/>
+                            <constraint firstItem="vbv-gV-UJg" firstAttribute="leading" secondItem="dtw-76-LvH" secondAttribute="trailing" constant="8" id="A1w-BJ-CLy"/>
+                            <constraint firstAttribute="height" constant="50" id="JEM-Hf-7h7"/>
+                            <constraint firstItem="ySK-xO-pRG" firstAttribute="top" secondItem="box-yA-Lr7" secondAttribute="top" id="Lwq-8F-C9E"/>
+                            <constraint firstAttribute="bottom" secondItem="ySK-xO-pRG" secondAttribute="bottom" id="cQS-RC-P77"/>
+                            <constraint firstAttribute="bottom" secondItem="dtw-76-LvH" secondAttribute="bottom" constant="8" id="h8k-JV-FdD"/>
+                            <constraint firstItem="vbv-gV-UJg" firstAttribute="centerY" secondItem="dtw-76-LvH" secondAttribute="centerY" id="rf3-5s-qiG"/>
+                            <constraint firstAttribute="trailing" secondItem="ySK-xO-pRG" secondAttribute="trailing" constant="12" id="s6k-j2-KJz"/>
+                            <constraint firstItem="dtw-76-LvH" firstAttribute="top" secondItem="box-yA-Lr7" secondAttribute="top" constant="8" id="vte-zO-b7D"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPc-su-UaX">
@@ -192,12 +198,19 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="arrowImageView" destination="ySK-xO-pRG" id="Ek7-8i-d4Z"/>
+                <outlet property="deleteBT" destination="goo-Br-ke0" id="LAf-Ic-YCA"/>
+                <outlet property="editBT" destination="PdV-cD-exe" id="sMb-0I-WcK"/>
                 <outlet property="editView" destination="2IH-qh-PAf" id="cVN-1T-piU"/>
+                <outlet property="sellOutBT" destination="401-EF-0xh" id="txK-Wb-0YL"/>
+                <outlet property="soldOutBT" destination="q5A-bo-Hks" id="02g-91-d7l"/>
             </connections>
             <point key="canvasLocation" x="74.5" y="90"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="icon" width="300" height="300"/>
+        <image name="rightarrow" width="8" height="15"/>
+        <image name="下拉按钮" width="15" height="8"/>
     </resources>
 </document>

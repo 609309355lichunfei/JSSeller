@@ -98,6 +98,17 @@
 		9C8997C51EFE35510097AF38 /* TurnoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8997C31EFE35510097AF38 /* TurnoverViewController.xib */; };
 		9C8997C91EFE3C780097AF38 /* TurnoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8997C71EFE3C780097AF38 /* TurnoverTableViewCell.m */; };
 		9C8997CA1EFE3C780097AF38 /* TurnoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8997C81EFE3C780097AF38 /* TurnoverTableViewCell.xib */; };
+		9CB79A631F14701D00597B6A /* ZJSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB79A621F14701D00597B6A /* ZJSwitch.m */; };
+		9CB79A671F14CC8300597B6A /* BankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB79A651F14CC8300597B6A /* BankTableViewCell.m */; };
+		9CB79A681F14CC8300597B6A /* BankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB79A661F14CC8300597B6A /* BankTableViewCell.xib */; };
+		9CB79A6C1F15AFEF00597B6A /* ServiceCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB79A6A1F15AFEF00597B6A /* ServiceCenterViewController.m */; };
+		9CB79A6D1F15AFEF00597B6A /* ServiceCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB79A6B1F15AFEF00597B6A /* ServiceCenterViewController.xib */; };
+		9CDB2E8A1F170B770072DBF6 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB2E881F170B770072DBF6 /* AboutUsViewController.m */; };
+		9CDB2E8B1F170B770072DBF6 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDB2E891F170B770072DBF6 /* AboutUsViewController.xib */; };
+		9CDB2E8F1F1717380072DBF6 /* JSPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB2E8D1F1717380072DBF6 /* JSPassWordViewController.m */; };
+		9CDB2E901F1717380072DBF6 /* JSPassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDB2E8E1F1717380072DBF6 /* JSPassWordViewController.xib */; };
+		9CDCC4D81F1C4E350005FB76 /* JSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCC4D61F1C4E350005FB76 /* JSLoginViewController.m */; };
+		9CDCC4D91F1C4E350005FB76 /* JSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDCC4D71F1C4E350005FB76 /* JSLoginViewController.xib */; };
 		B3CA79781EF773B200888226 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CA79771EF773B200888226 /* main.m */; };
 		B3CA797B1EF773B200888226 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CA797A1EF773B200888226 /* AppDelegate.m */; };
 		B3CA797E1EF773B200888226 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CA797D1EF773B200888226 /* ViewController.m */; };
@@ -296,6 +307,23 @@
 		9C8997C61EFE3C780097AF38 /* TurnoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnoverTableViewCell.h; sourceTree = "<group>"; };
 		9C8997C71EFE3C780097AF38 /* TurnoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnoverTableViewCell.m; sourceTree = "<group>"; };
 		9C8997C81EFE3C780097AF38 /* TurnoverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TurnoverTableViewCell.xib; sourceTree = "<group>"; };
+		9CB79A611F14701D00597B6A /* ZJSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSwitch.h; sourceTree = "<group>"; };
+		9CB79A621F14701D00597B6A /* ZJSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSwitch.m; sourceTree = "<group>"; };
+		9CB79A641F14CC8300597B6A /* BankTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankTableViewCell.h; sourceTree = "<group>"; };
+		9CB79A651F14CC8300597B6A /* BankTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankTableViewCell.m; sourceTree = "<group>"; };
+		9CB79A661F14CC8300597B6A /* BankTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankTableViewCell.xib; sourceTree = "<group>"; };
+		9CB79A691F15AFEF00597B6A /* ServiceCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCenterViewController.h; sourceTree = "<group>"; };
+		9CB79A6A1F15AFEF00597B6A /* ServiceCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCenterViewController.m; sourceTree = "<group>"; };
+		9CB79A6B1F15AFEF00597B6A /* ServiceCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCenterViewController.xib; sourceTree = "<group>"; };
+		9CDB2E871F170B770072DBF6 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		9CDB2E881F170B770072DBF6 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		9CDB2E891F170B770072DBF6 /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		9CDB2E8C1F1717380072DBF6 /* JSPassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPassWordViewController.h; sourceTree = "<group>"; };
+		9CDB2E8D1F1717380072DBF6 /* JSPassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPassWordViewController.m; sourceTree = "<group>"; };
+		9CDB2E8E1F1717380072DBF6 /* JSPassWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPassWordViewController.xib; sourceTree = "<group>"; };
+		9CDCC4D51F1C4E350005FB76 /* JSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLoginViewController.h; sourceTree = "<group>"; };
+		9CDCC4D61F1C4E350005FB76 /* JSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLoginViewController.m; sourceTree = "<group>"; };
+		9CDCC4D71F1C4E350005FB76 /* JSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSLoginViewController.xib; sourceTree = "<group>"; };
 		B3CA79731EF773B200888226 /* JSSeller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSSeller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CA79771EF773B200888226 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3CA79791EF773B200888226 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -381,6 +409,7 @@
 		9C8996A41EF8B55D0097AF38 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9CDCC4D41F1C4E100005FB76 /* Login */,
 				9C8996A51EF8B55D0097AF38 /* Classify */,
 				9C8996A91EF8B55D0097AF38 /* Home */,
 				9C8996AD1EF8B55D0097AF38 /* Menu */,
@@ -656,6 +685,8 @@
 		9C8997261EF8B8DD0097AF38 /* CustomeView */ = {
 			isa = PBXGroup;
 			children = (
+				9CB79A611F14701D00597B6A /* ZJSwitch.h */,
+				9CB79A621F14701D00597B6A /* ZJSwitch.m */,
 				9C8997271EF8B8DD0097AF38 /* BorderLineButton.h */,
 				9C8997281EF8B8DD0097AF38 /* BorderLineButton.m */,
 			);
@@ -705,6 +736,15 @@
 				9C8997C11EFE35510097AF38 /* TurnoverViewController.h */,
 				9C8997C21EFE35510097AF38 /* TurnoverViewController.m */,
 				9C8997C31EFE35510097AF38 /* TurnoverViewController.xib */,
+				9CB79A691F15AFEF00597B6A /* ServiceCenterViewController.h */,
+				9CB79A6A1F15AFEF00597B6A /* ServiceCenterViewController.m */,
+				9CB79A6B1F15AFEF00597B6A /* ServiceCenterViewController.xib */,
+				9CDB2E871F170B770072DBF6 /* AboutUsViewController.h */,
+				9CDB2E881F170B770072DBF6 /* AboutUsViewController.m */,
+				9CDB2E891F170B770072DBF6 /* AboutUsViewController.xib */,
+				9CDB2E8C1F1717380072DBF6 /* JSPassWordViewController.h */,
+				9CDB2E8D1F1717380072DBF6 /* JSPassWordViewController.m */,
+				9CDB2E8E1F1717380072DBF6 /* JSPassWordViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -715,6 +755,9 @@
 				9C8997C61EFE3C780097AF38 /* TurnoverTableViewCell.h */,
 				9C8997C71EFE3C780097AF38 /* TurnoverTableViewCell.m */,
 				9C8997C81EFE3C780097AF38 /* TurnoverTableViewCell.xib */,
+				9CB79A641F14CC8300597B6A /* BankTableViewCell.h */,
+				9CB79A651F14CC8300597B6A /* BankTableViewCell.m */,
+				9CB79A661F14CC8300597B6A /* BankTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -777,6 +820,16 @@
 				9C89979B1EFA16170097AF38 /* ClassfyModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9CDCC4D41F1C4E100005FB76 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9CDCC4D51F1C4E350005FB76 /* JSLoginViewController.h */,
+				9CDCC4D61F1C4E350005FB76 /* JSLoginViewController.m */,
+				9CDCC4D71F1C4E350005FB76 /* JSLoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B3CA796A1EF773B200888226 = {
@@ -978,9 +1031,11 @@
 				9C8997B11EFE2BFF0097AF38 /* ShopEditViewController.xib in Resources */,
 				9C8997941EFA0D550097AF38 /* ClassifyControlViewController.xib in Resources */,
 				9C8997C01EFE31B70097AF38 /* BankCardBindingViewController.xib in Resources */,
+				9CB79A6D1F15AFEF00597B6A /* ServiceCenterViewController.xib in Resources */,
 				B3CA79891EF773B200888226 /* LaunchScreen.storyboard in Resources */,
 				9C8996BC1EF8B55D0097AF38 /* MenuViewController.xib in Resources */,
 				9C8997341EF8B8DD0097AF38 /* LICENSE in Resources */,
+				9CDB2E8B1F170B770072DBF6 /* AboutUsViewController.xib in Resources */,
 				9C8996BE1EF8B55D0097AF38 /* ShopController.xib in Resources */,
 				9C8997991EFA11910097AF38 /* ClassifyControlTableViewCell.xib in Resources */,
 				9C8996B81EF8B55D0097AF38 /* ClassifyController.xib in Resources */,
@@ -994,9 +1049,12 @@
 				9C8997CA1EFE3C780097AF38 /* TurnoverTableViewCell.xib in Resources */,
 				9C8997B61EFE2F5A0097AF38 /* paymentAccountSettingViewController.xib in Resources */,
 				9C89976C1EF8BC080097AF38 /* MainViewController.xib in Resources */,
+				9CDCC4D91F1C4E350005FB76 /* JSLoginViewController.xib in Resources */,
 				B3CA79811EF773B200888226 /* Main.storyboard in Resources */,
+				9CDB2E901F1717380072DBF6 /* JSPassWordViewController.xib in Resources */,
 				9C89974D1EF8B8DD0097AF38 /* IQKeyboardManager.bundle in Resources */,
 				9C8997C51EFE35510097AF38 /* TurnoverViewController.xib in Resources */,
+				9CB79A681F14CC8300597B6A /* BankTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1069,6 +1127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDCC4D81F1C4E350005FB76 /* JSLoginViewController.m in Sources */,
 				9C89978F1EFA05750097AF38 /* MenuModel.m in Sources */,
 				9C8997501EF8B8DD0097AF38 /* LCPanGestureRecognizer.m in Sources */,
 				9C8997B01EFE2BFF0097AF38 /* ShopEditViewController.m in Sources */,
@@ -1086,6 +1145,7 @@
 				9C8997411EF8B8DD0097AF38 /* IQUITextFieldView+Additions.m in Sources */,
 				9C8997551EF8B8DD0097AF38 /* MBProgressHUD+HH.m in Sources */,
 				9C8997AB1EFE2A0F0097AF38 /* SettingViewController.m in Sources */,
+				9CB79A6C1F15AFEF00597B6A /* ServiceCenterViewController.m in Sources */,
 				9C8997461EF8B8DD0097AF38 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				9C8997351EF8B8DD0097AF38 /* AbstractActionSheetPicker.m in Sources */,
 				9C8997451EF8B8DD0097AF38 /* IQKeyboardManager.m in Sources */,
@@ -1098,6 +1158,7 @@
 				9C8997B51EFE2F5A0097AF38 /* paymentAccountSettingViewController.m in Sources */,
 				9C8997601EF8B8DD0097AF38 /* OpenUDID.m in Sources */,
 				9C8997851EF9016D0097AF38 /* MenuTableViewCell.m in Sources */,
+				9CB79A671F14CC8300597B6A /* BankTableViewCell.m in Sources */,
 				9C8997BF1EFE31B70097AF38 /* BankCardBindingViewController.m in Sources */,
 				9C89973B1EF8B8DD0097AF38 /* ActionSheetStringPicker.m in Sources */,
 				9C8997471EF8B8DD0097AF38 /* IQTextView.m in Sources */,
@@ -1105,6 +1166,7 @@
 				9C8997981EFA11910097AF38 /* ClassifyControlTableViewCell.m in Sources */,
 				9C89976B1EF8BC080097AF38 /* MainViewController.m in Sources */,
 				9C8996BD1EF8B55D0097AF38 /* ShopController.m in Sources */,
+				9CDB2E8F1F1717380072DBF6 /* JSPassWordViewController.m in Sources */,
 				9C8997891EF958130097AF38 /* MenuTableViewHeaderView.m in Sources */,
 				9C8997BA1EFE30BA0097AF38 /* AlipayBindingViewController.m in Sources */,
 				9C89973F1EF8B8DD0097AF38 /* IQNSArray+Sort.m in Sources */,
@@ -1118,6 +1180,7 @@
 				9C8996B51EF8B55D0097AF38 /* LCFNavigationController.m in Sources */,
 				B3CA797B1EF773B200888226 /* AppDelegate.m in Sources */,
 				9C8997561EF8B8DD0097AF38 /* UIBarButtonItem+Extension.m in Sources */,
+				9CDB2E8A1F170B770072DBF6 /* AboutUsViewController.m in Sources */,
 				9C8997671EF8B9A50097AF38 /* AppDelegate+PushService.m in Sources */,
 				9C89973A1EF8B8DD0097AF38 /* ActionSheetMultipleStringPicker.m in Sources */,
 				9C8997571EF8B8DD0097AF38 /* UIColor+HexString.m in Sources */,
@@ -1136,6 +1199,7 @@
 				B3CA79781EF773B200888226 /* main.m in Sources */,
 				9C8997591EF8B8DD0097AF38 /* UIImage+SearchHeight.m in Sources */,
 				9C89974C1EF8B8DD0097AF38 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				9CB79A631F14701D00597B6A /* ZJSwitch.m in Sources */,
 				9C89975B1EF8B8DD0097AF38 /* UIView+CCExtension.m in Sources */,
 				9C8996B91EF8B55D0097AF38 /* HomeViewController.m in Sources */,
 				9C8997C91EFE3C780097AF38 /* TurnoverTableViewCell.m in Sources */,

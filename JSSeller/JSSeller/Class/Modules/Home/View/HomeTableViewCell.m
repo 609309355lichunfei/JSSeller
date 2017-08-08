@@ -25,6 +25,9 @@
 }
 
 - (void)registUI {
+    self.myButton.layer.borderWidth = 0;
+    self.myButton.layer.cornerRadius = 5;
+    self.myButton.clipsToBounds = YES;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeTableviewCellTableViewCell" bundle:nil]  forCellReuseIdentifier:@"HomeTableviewCellTableViewCell"];
@@ -35,21 +38,17 @@
     switch (_type) {
         case HomeTableViewCellTypeAwait:
             _typeLabel.text = @"待接单";
-            _typeLabel.textColor = RGB(120, 120, 120);
             [_myButton setTitle:@"确定接单" forState:(UIControlStateNormal)];
             break;
         case HomeTableViewCellTypeAccept:
             _typeLabel.text = @"已接单";
-            _typeLabel.textColor = RGB(120, 120, 120);
             [_myButton setTitle:@"确定接单" forState:(UIControlStateNormal)];
             break;
         case HomeTableViewCellTypeComplete:
             _typeLabel.text = @"已完成";
-            _typeLabel.textColor = RGB(120, 120, 120);
             [_myButton setTitle:@"确定接单" forState:(UIControlStateNormal)];
             break;
         case HomeTableViewCellTypeException:
-            _typeLabel.textColor = [UIColor redColor];
             _typeLabel.text = @"已取消";
             [_myButton setTitle:@"退款" forState:(UIControlStateNormal)];
             break;
