@@ -8,7 +8,7 @@
 
 #import "ClassifyControlViewController.h"
 #import "ClassifyControlTableViewCell.h"
-#import "ClassfyModel.h"
+#import "JSSHCateModel.h"
 
 @interface ClassifyControlViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -27,27 +27,47 @@
 
 - (void)registUI {
     [self.tableView registerNib:[UINib nibWithNibName:@"ClassifyControlTableViewCell" bundle:nil] forCellReuseIdentifier:@"ClassifyControlTableViewCell"];
-    for (int i = 0; i < 3; i ++) {
-        ClassfyModel *model = [[ClassfyModel alloc]init];
-        model.option = NO;
-        [self.dataArray addObject:model];
-    }
-    [self.tableView reloadData];
+    MJWeakSelf;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf getConnectCate];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    
 }
+
+- (void)getConnectCate {
+    [[JSRequestManager sharedManager] getCatesWithSuccess:^(id responseObject) {
+        [self.tableView.mj_header endRefreshing];
+        [self.dataArray removeAllObjects];
+        NSArray *cateDicArray = responseObject[@"data"][@"cates"];
+        for (NSDictionary *cateDic in cateDicArray) {
+            JSSHCateModel *cateModel = [[JSSHCateModel alloc] init];
+            [cateModel setValuesForKeysWithDictionary:cateDic];
+            [self.dataArray addObject:cateModel];
+        }
+        [self.tableView reloadData];
+    } Failed:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+        
+    }];
+}
+
 - (IBAction)backAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)addAction:(id)sender {
-    ClassfyModel *model = [[ClassfyModel alloc]init];
+    JSSHCateModel *model = [[JSSHCateModel alloc]init];
     model.option = NO;
+    model.isEdit = YES;
+    model.isAdd = YES;
     [self.dataArray addObject:model];
     [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ClassfyModel *model = self.dataArray[indexPath.row];
+    JSSHCateModel *model = self.dataArray[indexPath.row];
     if (model.option) {
         return 90;
     } else {
@@ -67,14 +87,36 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ClassifyControlTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClassifyControlTableViewCell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    ClassfyModel *model = self.dataArray[indexPath.row];
+    JSSHCateModel *model = self.dataArray[indexPath.row];
     cell.model = model;
+    cell.doneBlock = ^(JSSHCateModel *cateModel) {
+        if (cateModel.isAdd) {
+            [[JSRequestManager sharedManager] postCateWithCateModel:cateModel Success:^(id responseObject) {
+                [self.tableView.mj_header beginRefreshing];
+            } Failed:^(NSError *error) {
+                [AppManager showToastWithMsg:@"添加失败"];
+            }];
+        } else {
+            [[JSRequestManager sharedManager] putCateWithCateModel:cateModel Success:^(id responseObject) {
+                [self.tableView.mj_header beginRefreshing];
+            } Failed:^(NSError *error) {
+                [AppManager showToastWithMsg:@"修改失败"];
+            }];
+        }
+    };
+    cell.deleteBlock = ^(JSSHCateModel *cateModel){
+        [[JSRequestManager sharedManager] deleteCateWithCateModel:cateModel Success:^(id responseObject) {
+            [self.tableView.mj_header beginRefreshing];
+        } Failed:^(NSError *error) {
+            [AppManager showToastWithMsg:@"修改失败"];
+        }];
+    };
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ClassfyModel *model = self.dataArray[indexPath.row];
+    JSSHCateModel *model = self.dataArray[indexPath.row];
     model.option = !model.option;
     [tableView reloadRowAtIndexPath:indexPath withRowAnimation:(UITableViewRowAnimationFade)];
 }

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class JSSHOrderModel;
 typedef NS_ENUM(NSInteger, HomeTableViewCellType) {
     HomeTableViewCellTypeAwait,
     HomeTableViewCellTypeAccept,
@@ -16,5 +17,10 @@ typedef NS_ENUM(NSInteger, HomeTableViewCellType) {
 };
 
 @interface HomeTableViewCell : UITableViewCell
+@property (strong, nonatomic) JSSHOrderModel *orderModel;
 @property (assign, nonatomic) HomeTableViewCellType type;
+
+@property (copy, nonatomic) void (^btactionBlock)();
+
+
 @end

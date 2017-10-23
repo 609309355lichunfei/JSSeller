@@ -92,6 +92,7 @@
 #define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
 #define FONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
 
+#define App_FamilyFontName @"PingFang SC"
 
 //定义UIImage对象
 #define ImageWithFile(_pointer) [UIImage imageWithContentsOfFile:([[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@@%dx", _pointer, (int)[UIScreen mainScreen].nativeScale] ofType:@"png"])]

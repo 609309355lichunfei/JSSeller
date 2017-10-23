@@ -26,11 +26,14 @@
 #import "UIResponder+Adapt.h"
 #import "UIFont+Fonts.h"
 #import "UIBarButtonItem+Extension.h"
+#import "JSRequestManager.h"
+#import "UserManager.h"
+#import "JSYHLocationManager.h"
 //#import "MBProgressHUD+XY.h"
 /**
  * @第三方
  */
-#import <YYKit.h>
-#import <MBProgressHUD.h>
-#import <MJRefresh.h>
+#import <YYKit/YYKit.h>
+#import "MBProgressHUD+HH.h"
+#import <MJRefresh/MJRefresh.h>
 #endif /* PrefixHeader_h */

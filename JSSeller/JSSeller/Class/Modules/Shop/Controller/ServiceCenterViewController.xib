@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangSC-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceCenterViewController">
             <connections>
@@ -23,10 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlM-2H-YPl">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="fn3-DH-8Ng"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
                     <color key="barTintColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -34,7 +36,7 @@
                         <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="客服中心" id="sC4-3A-QT8">
+                        <navigationItem title="客服中心" prompt=" " id="sC4-3A-QT8">
                             <barButtonItem key="leftBarButtonItem" image="返回" id="026-86-YxU">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -45,10 +47,10 @@
                     </items>
                 </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ro5-vL-DAS">
-                    <rect key="frame" x="0.0" y="76" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="90" width="375" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="010-123456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8b-Bx-c5d">
-                            <rect key="frame" x="12" y="14.5" width="90" height="22.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0574-87566681" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8b-Bx-c5d">
+                            <rect key="frame" x="12" y="14.5" width="120" height="22.5"/>
                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

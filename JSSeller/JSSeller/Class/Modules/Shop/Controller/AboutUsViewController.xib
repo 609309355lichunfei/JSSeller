@@ -1,16 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangSC-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutUsViewController">
             <connections>
+                <outlet property="contentLabel" destination="IRy-SC-gC5" id="AdB-Ut-pgY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,10 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiz-eF-CQR">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="bar-LZ-smo"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
                     <color key="barTintColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -31,7 +34,7 @@
                         <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="关于我们" id="Tza-uG-OOt">
+                        <navigationItem title="关于我们" prompt=" " id="Tza-uG-OOt">
                             <barButtonItem key="leftBarButtonItem" image="返回" id="yub-AI-mU0">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -41,9 +44,43 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kmi-CB-dDc">
+                    <rect key="frame" x="0.0" y="78" width="375" height="589"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dm-ka-hvM">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRy-SC-gC5">
+                                    <rect key="frame" x="8" y="8" width="359" height="17"/>
+                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="IRy-SC-gC5" secondAttribute="bottom" constant="8" id="OTn-bd-EMM"/>
+                                <constraint firstItem="IRy-SC-gC5" firstAttribute="leading" secondItem="8dm-ka-hvM" secondAttribute="leading" constant="8" id="ROv-Wt-8ni"/>
+                                <constraint firstAttribute="trailing" secondItem="IRy-SC-gC5" secondAttribute="trailing" constant="8" id="gXF-wX-NGE"/>
+                                <constraint firstItem="IRy-SC-gC5" firstAttribute="top" secondItem="8dm-ka-hvM" secondAttribute="top" constant="8" id="zz1-bz-U0O"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="8dm-ka-hvM" firstAttribute="top" secondItem="Kmi-CB-dDc" secondAttribute="top" id="1HK-au-442"/>
+                        <constraint firstAttribute="bottom" secondItem="8dm-ka-hvM" secondAttribute="bottom" id="j5y-fn-QkF"/>
+                        <constraint firstItem="8dm-ka-hvM" firstAttribute="centerX" secondItem="Kmi-CB-dDc" secondAttribute="centerX" id="jAf-i6-9bv"/>
+                        <constraint firstAttribute="trailing" secondItem="8dm-ka-hvM" secondAttribute="trailing" id="rd6-3A-0KL"/>
+                        <constraint firstItem="8dm-ka-hvM" firstAttribute="leading" secondItem="Kmi-CB-dDc" secondAttribute="leading" id="t4e-ui-BAn"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="Kmi-CB-dDc" secondAttribute="bottom" id="4Gp-45-IVb"/>
+                <constraint firstAttribute="trailing" secondItem="Kmi-CB-dDc" secondAttribute="trailing" id="CX7-aD-Thc"/>
+                <constraint firstItem="Kmi-CB-dDc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DXX-ep-tKw"/>
+                <constraint firstItem="Kmi-CB-dDc" firstAttribute="top" secondItem="eiz-eF-CQR" secondAttribute="bottom" id="JCF-Yz-N5U"/>
                 <constraint firstAttribute="trailing" secondItem="eiz-eF-CQR" secondAttribute="trailing" id="OZG-OE-nIR"/>
                 <constraint firstItem="eiz-eF-CQR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TdJ-Id-zvx"/>
                 <constraint firstItem="eiz-eF-CQR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wld-vm-uxl"/>

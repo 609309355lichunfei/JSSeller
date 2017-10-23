@@ -32,6 +32,15 @@
 - (IBAction)backAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+- (IBAction)logOutAction:(id)sender {
+    [[JSRequestManager sharedManager] logoutWithSuccess:^(id responseObject) {
+        
+        [AppManager showToastWithMsg:@"已退出"];
+        [self.navigationController popViewControllerAnimated:YES];
+    } Failed:^(NSError *error) {
+        
+    }];
+}
 
 - (IBAction)storeSettingAction:(id)sender {
     ShopEditViewController *shopEditVC = [[ShopEditViewController alloc]init];

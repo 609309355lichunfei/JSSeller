@@ -1,19 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangSC-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
                 <outlet property="acceptedBT" destination="X1c-aV-LhE" id="RLt-R3-183"/>
                 <outlet property="completedBT" destination="98x-wC-nyX" id="u6n-BQ-yNz"/>
                 <outlet property="exceptionBT" destination="Lpw-NV-EwQ" id="8jX-LV-bLQ"/>
+                <outlet property="myTitleItem" destination="71I-4M-cRq" id="oCE-rJ-g4y"/>
                 <outlet property="tableView" destination="ZZg-0b-9WR" id="WFj-Yx-ROW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="xinBT" destination="hJD-tj-MNn" id="jNu-DG-yYn"/>
@@ -25,10 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twY-EL-rzk">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="NeM-3i-hur"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
                     <color key="barTintColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -36,11 +39,11 @@
                         <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="老屋面馆" id="71I-4M-cRq"/>
+                        <navigationItem title="老屋面馆" prompt=" " id="71I-4M-cRq"/>
                     </items>
                 </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJD-tj-MNn">
-                    <rect key="frame" x="0.0" y="64" width="94" height="40"/>
+                    <rect key="frame" x="0.0" y="78" width="94" height="40"/>
                     <color key="backgroundColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="ada-3P-Pxp"/>
@@ -54,7 +57,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-NV-EwQ">
-                    <rect key="frame" x="281.5" y="64" width="93.5" height="40"/>
+                    <rect key="frame" x="281.5" y="78" width="93.5" height="40"/>
                     <color key="backgroundColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                     <state key="normal" title="异常订单">
@@ -65,7 +68,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1c-aV-LhE">
-                    <rect key="frame" x="94" y="64" width="93" height="40"/>
+                    <rect key="frame" x="94" y="78" width="93" height="40"/>
                     <color key="backgroundColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                     <state key="normal" title="已接单">
@@ -76,7 +79,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98x-wC-nyX">
-                    <rect key="frame" x="187.5" y="64" width="94" height="40"/>
+                    <rect key="frame" x="187.5" y="78" width="94" height="40"/>
                     <color key="backgroundColor" red="0.027450980390000001" green="0.58431372550000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                     <state key="normal" title="已完成">
@@ -87,7 +90,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZZg-0b-9WR">
-                    <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                    <rect key="frame" x="0.0" y="118" width="375" height="549"/>
                     <color key="backgroundColor" red="0.88719951919999995" green="0.88719951919999995" blue="0.88719951919999995" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="IfW-IB-wXF"/>

@@ -43,7 +43,14 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if ([JSRequestManager sharedManager].userName == nil || [JSRequestManager sharedManager].userName.length == 0) {
+        JSLoginViewController *loginVC = [[JSLoginViewController alloc] init];
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }
 }
 
 - (void)registUI {
@@ -59,6 +66,13 @@
     
     self.menuVC = [[MenuViewController alloc]init];
     self.shopVC = [[ShopController alloc]init];
+    
+    if ([JSRequestManager sharedManager].token == nil || [JSRequestManager sharedManager].token.length == 0) {
+        JSLoginViewController *loginVC = [[JSLoginViewController alloc] init];
+        [self presentViewController:loginVC animated:YES completion:^{
+            
+        }];
+    }
 }
 
 - (IBAction)menuManagerAction:(id)sender {

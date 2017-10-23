@@ -16,6 +16,10 @@
 #define kAppKey_Wechat          @"wx054ddc442fc038ea"
 #define kSecret_Wechat          @"bed32ebd864610f993a92e59f343ec7a"
 
+const static NSString *APIKey = @"65617411177f992e7842acba3f635839";
+
+static NSString *JPushAppKey = @"0d368691dd8acc697dae9e30";
+static NSString *JPushChannel = @"Publish channel";
 // 腾讯
 #define kAppKey_Tencent          @"1104810843"
 

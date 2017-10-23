@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class JSSHDishModel;
 @interface AddFoodViewController : UIViewController
-
+@property (strong, nonatomic) NSNumber *cateid;
+@property (strong, nonatomic) JSSHDishModel *dishModel;
 @end

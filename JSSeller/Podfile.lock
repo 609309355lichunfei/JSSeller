@@ -14,6 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AMap3DMap-NO-IDFA (5.3.0):
+    - AMapFoundation-NO-IDFA (~> 1.3)
+  - AMapFoundation-NO-IDFA (1.4.2)
+  - AMapLocation-NO-IDFA (2.4.0):
+    - AMapFoundation-NO-IDFA (~> 1.4)
+  - AMapSearch-NO-IDFA (5.3.0):
+    - AMapFoundation-NO-IDFA (~> 1.2)
+  - JCore (1.1.5)
+  - JPush (3.0.6):
+    - JCore (~> 1.1.1)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
@@ -26,6 +36,10 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - AMap3DMap-NO-IDFA
+  - AMapLocation-NO-IDFA
+  - AMapSearch-NO-IDFA
+  - JPush (~> 3.0.2)
   - Masonry
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh
@@ -34,10 +48,18 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMap3DMap-NO-IDFA: 20c58f579e570fbd05242c6b0255bb32f2d6c719
+  AMapFoundation-NO-IDFA: 3b9ce87abc6a37c718cc320687469d0b74d5c953
+  AMapLocation-NO-IDFA: 9493012d3241a7d551942c7c1e1069b51f295083
+  AMapSearch-NO-IDFA: eb0f9b424e6c3cdcb0e8c656e9622e8d0ee54238
+  JCore: 9bd9c770c877c583d98b90a68792b8361974c231
+  JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 908f81596ee000b4197f91b1585f8a17703e7b97
+
+COCOAPODS: 1.3.1

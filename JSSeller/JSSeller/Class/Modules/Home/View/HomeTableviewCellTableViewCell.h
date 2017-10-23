@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class JSSHDishModel;
 @interface HomeTableviewCellTableViewCell : UITableViewCell
-
+@property (strong, nonatomic) JSSHDishModel *dishModel;
 @end

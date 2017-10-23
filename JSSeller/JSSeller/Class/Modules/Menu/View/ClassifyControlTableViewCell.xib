@@ -31,10 +31,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightarrow" translatesAutoresizingMaskIntoConstraints="NO" id="KWT-EU-J9z">
                                 <rect key="frame" x="331" y="0.0" width="8" height="50"/>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrr-p3-uhK">
+                                <rect key="frame" x="307" y="3" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="LBZ-Gi-fvs"/>
+                                    <constraint firstAttribute="height" constant="44" id="PQF-nx-uAg"/>
+                                </constraints>
+                                <state key="normal" image="勾选-"/>
+                                <connections>
+                                    <action selector="doneAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="spN-nP-1cL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xrr-p3-uhK" firstAttribute="centerY" secondItem="Md7-f1-POk" secondAttribute="centerY" id="1iW-20-9qs"/>
                             <constraint firstItem="KWT-EU-J9z" firstAttribute="top" secondItem="kVg-39-7da" secondAttribute="top" id="5qJ-pd-Yck"/>
+                            <constraint firstAttribute="trailing" secondItem="xrr-p3-uhK" secondAttribute="trailing" id="RdE-H2-S4d"/>
                             <constraint firstAttribute="height" constant="50" id="bAE-0c-MJf"/>
                             <constraint firstItem="Md7-f1-POk" firstAttribute="centerY" secondItem="kVg-39-7da" secondAttribute="centerY" id="caw-i5-gSs"/>
                             <constraint firstAttribute="bottom" secondItem="KWT-EU-J9z" secondAttribute="bottom" id="dk8-BJ-F4e"/>
@@ -107,6 +120,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="doneBT" destination="xrr-p3-uhK" id="Qyz-bj-WNh"/>
+                <outlet property="nameTF" destination="Md7-f1-POk" id="Ppj-5g-XcF"/>
                 <outlet property="optionImageView" destination="KWT-EU-J9z" id="3ub-hw-DHP"/>
                 <outlet property="optionVIew" destination="dIX-QZ-RE1" id="753-Tg-fwY"/>
             </connections>
@@ -115,5 +130,6 @@
     </objects>
     <resources>
         <image name="rightarrow" width="8" height="15"/>
+        <image name="勾选-" width="26" height="26"/>
     </resources>
 </document>

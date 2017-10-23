@@ -139,7 +139,7 @@ static AFHTTPSessionManager *_sessionManager;
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //解密
-        responseObject = aesDecryptWithData(responseObject);
+        //responseObject = aesDecryptWithData(responseObject);
         
         if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
         [[self allSessionTask] removeObject:task];
@@ -176,7 +176,7 @@ static AFHTTPSessionManager *_sessionManager;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 
         //解密
-        responseObject = aesDecryptWithData(responseObject);
+        //responseObject = aesDecryptWithData(responseObject);
         
         if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
         [[self allSessionTask] removeObject:task];
@@ -191,6 +191,144 @@ static AFHTTPSessionManager *_sessionManager;
         failure ? failure(error) : nil;
         
     }];
+    
+    // 添加最新的sessionTask到数组
+    sessionTask ? [[self allSessionTask] addObject:sessionTask] : nil ;
+    return sessionTask;
+}
+
++ (__kindof NSURLSessionTask *)DELETE:(NSString *)URL
+                           parameters:(id)parameters
+                              success:(PPHttpRequestSuccess)success
+                              failure:(PPHttpRequestFailed)failure {
+    return [self DELETE:URL parameters:parameters responseCache:nil success:success failure:failure];
+}
+
++ (__kindof NSURLSessionTask *)DELETE:(NSString *)URL
+                           parameters:(id)parameters
+                        responseCache:(PPHttpRequestCache)responseCache
+                              success:(PPHttpRequestSuccess)success
+                              failure:(PPHttpRequestFailed)failure {
+    //读取缓存
+    responseCache!=nil ? responseCache([PPNetworkCache httpCacheForURL:URL parameters:parameters]) : nil;
+    //加密 header body
+    [self encodeParameters:parameters];
+    
+    NSURLSessionTask *sessionTask = [_sessionManager DELETE:URL parameters:parameters  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        //解密
+        //responseObject = aesDecryptWithData(responseObject);
+        
+        if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
+        [[self allSessionTask] removeObject:task];
+        success ? success(responseObject) : nil;
+        //对数据进行异步缓存
+        responseCache!=nil ? [PPNetworkCache setHttpCache:responseObject URL:URL parameters:parameters] : nil;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        if (_isOpenLog) {PPLog(@"error = %@",error);}
+        [[self allSessionTask] removeObject:task];
+        failure ? failure(error) : nil;
+        
+    }];
+    
+    // 添加最新的sessionTask到数组
+    sessionTask ? [[self allSessionTask] addObject:sessionTask] : nil ;
+    return sessionTask;
+}
+
++ (__kindof NSURLSessionTask *)PUT:(NSString *)URL
+                        parameters:(id)parameters
+                           success:(PPHttpRequestSuccess)success
+                           failure:(PPHttpRequestFailed)failure {
+    return [self PUT:URL parameters:parameters responseCache:nil success:success failure:failure];
+}
+
++ (__kindof NSURLSessionTask *)PUT:(NSString *)URL
+                        parameters:(id)parameters
+                     responseCache:(PPHttpRequestCache)responseCache
+                           success:(PPHttpRequestSuccess)success
+                           failure:(PPHttpRequestFailed)failure {
+    //读取缓存
+    responseCache!=nil ? responseCache([PPNetworkCache httpCacheForURL:URL parameters:parameters]) : nil;
+    //加密 header body
+    [self encodeParameters:parameters];
+    
+    NSURLSessionTask *sessionTask = [_sessionManager PUT:URL parameters:parameters  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        //解密
+        //responseObject = aesDecryptWithData(responseObject);
+        
+        if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
+        [[self allSessionTask] removeObject:task];
+        success ? success(responseObject) : nil;
+        //对数据进行异步缓存
+        responseCache!=nil ? [PPNetworkCache setHttpCache:responseObject URL:URL parameters:parameters] : nil;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        if (_isOpenLog) {PPLog(@"error = %@",error);}
+        [[self allSessionTask] removeObject:task];
+        failure ? failure(error) : nil;
+        
+    }];
+    
+    
+    // 添加最新的sessionTask到数组
+    sessionTask ? [[self allSessionTask] addObject:sessionTask] : nil ;
+    return sessionTask;
+}
+
++ (__kindof NSURLSessionTask *)PUT:(NSString *)URL
+                        parameters:(id)parameters
+                              data:(NSData *)data
+                     responseCache:(PPHttpRequestCache)responseCache
+                           success:(PPHttpRequestSuccess)success
+                           failure:(PPHttpRequestFailed)failure {
+    //读取缓存
+    responseCache!=nil ? responseCache([PPNetworkCache httpCacheForURL:URL parameters:parameters]) : nil;
+    //加密 header body
+    [self encodeParameters:parameters];
+    
+    //    NSURLSessionTask *sessionTask = [_sessionManager PUT:URL parameters:parameters  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    //
+    //        //解密
+    //        //responseObject = aesDecryptWithData(responseObject);
+    //
+    //        if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
+    //        [[self allSessionTask] removeObject:task];
+    //        success ? success(responseObject) : nil;
+    //        //对数据进行异步缓存
+    //        responseCache!=nil ? [PPNetworkCache setHttpCache:responseObject URL:URL parameters:parameters] : nil;
+    //
+    //    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    //
+    //        if (_isOpenLog) {PPLog(@"error = %@",error);}
+    //        [[self allSessionTask] removeObject:task];
+    //        failure ? failure(error) : nil;
+    //
+    //    }];
+    NSURLSessionTask *sessionTask = [_sessionManager PUT:URL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        if (data != nil) {
+            [formData appendPartWithFileData:data name:@"logo.png" fileName:@"log.png" mimeType:@"image/png"];
+        }
+        
+    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //解密
+        //responseObject = aesDecryptWithData(responseObject);
+        
+        if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
+        [[self allSessionTask] removeObject:task];
+        success ? success(responseObject) : nil;
+        //对数据进行异步缓存
+        responseCache!=nil ? [PPNetworkCache setHttpCache:responseObject URL:URL parameters:parameters] : nil;
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (_isOpenLog) {PPLog(@"error = %@",error);}
+        [[self allSessionTask] removeObject:task];
+        failure ? failure(error) : nil;
+    }];
+    
     
     // 添加最新的sessionTask到数组
     sessionTask ? [[self allSessionTask] addObject:sessionTask] : nil ;
@@ -384,15 +522,15 @@ static AFHTTPSessionManager *_sessionManager;
     _sessionManager = [AFHTTPSessionManager manager];
     // 设置请求的超时时间
     _sessionManager.requestSerializer.timeoutInterval = 30.f;
-    
+    _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
     // 设置服务器返回结果的类型:JSON (AFJSONResponseSerializer,AFHTTPResponseSerializer)
-//    _sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-    _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    _sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+//    _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/*",@"text/encode", nil];
     // 打开状态栏的等待菊花
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     //开启加密模式
-    [self openAES];
+    [self closeAES];
 }
 
 #pragma mark - 重置AFHTTPSessionManager相关属性

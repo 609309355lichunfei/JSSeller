@@ -1,19 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangSC-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShopEditViewController">
             <connections>
+                <outlet property="addressLabel" destination="tU6-La-a5V" id="Dfl-eo-A1M"/>
                 <outlet property="doneBT" destination="Djk-wZ-S7Z" id="sij-4a-AiG"/>
+                <outlet property="introduceLabel" destination="bAH-kj-nc3" id="LKF-YX-GG5"/>
+                <outlet property="phoneNumLabel" destination="Kzf-hz-j2E" id="jgh-Lt-hoB"/>
                 <outlet property="scrollView" destination="OuJ-Xg-dHc" id="jEr-ao-Mie"/>
                 <outlet property="scrollViewToBottom" destination="0br-WX-gTR" id="YFK-ca-sDd"/>
+                <outlet property="shopLogoImageView" destination="8eF-Hm-gXe" id="WLj-xe-kOn"/>
+                <outlet property="shopinfoLabel" destination="gxq-9a-E9s" id="vrk-dM-HTT"/>
+                <outlet property="shopnameLabel" destination="Q97-p5-VrZ" id="DoR-3g-xyd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,10 +34,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuK-TT-2QM">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="CS7-6g-JNL"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
                     <color key="barTintColor" red="0.015686274510000001" green="0.56470588239999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -34,7 +42,7 @@
                         <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="店铺编辑" id="vcQ-YB-5Bq">
+                        <navigationItem title="店铺编辑" prompt=" " id="vcQ-YB-5Bq">
                             <barButtonItem key="leftBarButtonItem" image="返回" id="vjY-XL-B6z">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -45,32 +53,13 @@
                     </items>
                 </navigationBar>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuJ-Xg-dHc">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="78" width="375" height="589"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdD-IJ-cbs">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="603"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="524"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zVM-NM-CNg">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="150" id="ynj-gF-zQl"/>
-                                    </constraints>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMo-qs-o5E">
-                                    <rect key="frame" x="-0.5" y="0.0" width="374" height="150"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="150" id="VNC-nN-F4k"/>
-                                    </constraints>
-                                    <state key="normal" title="点击上传照片">
-                                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="uploadImageAction:" destination="-1" eventType="touchUpInside" id="CKg-iu-L60"/>
-                                    </connections>
-                                </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3I1-ny-DGR">
-                                    <rect key="frame" x="0.0" y="162" width="374" height="50"/>
+                                    <rect key="frame" x="0.0" y="136" width="374" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Uj-SU-S9Q">
                                             <rect key="frame" x="13" y="14.5" width="48" height="22.5"/>
@@ -78,7 +67,7 @@
                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写店铺名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q97-p5-VrZ">
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写店铺名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q97-p5-VrZ">
                                             <rect key="frame" x="91" y="15.5" width="275" height="21"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
@@ -86,6 +75,7 @@
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstItem="5Uj-SU-S9Q" firstAttribute="centerY" secondItem="3I1-ny-DGR" secondAttribute="centerY" id="E3H-QR-83i"/>
                                         <constraint firstAttribute="height" constant="50" id="Ibf-US-Xte"/>
@@ -94,9 +84,12 @@
                                         <constraint firstItem="Q97-p5-VrZ" firstAttribute="leading" secondItem="5Uj-SU-S9Q" secondAttribute="trailing" constant="30" id="hjU-95-4oM"/>
                                         <constraint firstItem="5Uj-SU-S9Q" firstAttribute="leading" secondItem="3I1-ny-DGR" secondAttribute="leading" constant="13" id="tx2-dc-9T6"/>
                                     </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="meu-VG-rcc" appends="YES" id="fK7-gY-ESf"/>
+                                    </connections>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSu-Kl-o1L">
-                                    <rect key="frame" x="0.0" y="213" width="374" height="50"/>
+                                    <rect key="frame" x="0.0" y="187" width="374" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9T8-xp-j2o">
                                             <rect key="frame" x="13" y="14.5" width="64" height="22.5"/>
@@ -104,7 +97,7 @@
                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写正确号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzf-hz-j2E">
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写正确号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzf-hz-j2E">
                                             <rect key="frame" x="91" y="15.5" width="275" height="21"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
@@ -112,6 +105,7 @@
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="O9K-er-8db"/>
                                         <constraint firstItem="Kzf-hz-j2E" firstAttribute="centerY" secondItem="9T8-xp-j2o" secondAttribute="centerY" id="qkY-yr-pu4"/>
@@ -119,54 +113,73 @@
                                         <constraint firstItem="9T8-xp-j2o" firstAttribute="centerY" secondItem="YSu-Kl-o1L" secondAttribute="centerY" id="wu8-41-xJK"/>
                                         <constraint firstAttribute="trailing" secondItem="Kzf-hz-j2E" secondAttribute="trailing" constant="8" id="yto-PP-9Z3"/>
                                     </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="rY9-UI-2Ks" appends="YES" id="QG6-d5-KgL"/>
+                                    </connections>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlN-r2-5Rw">
-                                    <rect key="frame" x="0.0" y="315" width="374" height="50"/>
+                                    <rect key="frame" x="0.0" y="289" width="374" height="76"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="详细地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZxZ-ol-0h7">
-                                            <rect key="frame" x="91" y="14.5" width="275" height="21"/>
-                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请填写活动介绍" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAH-kj-nc3">
+                                            <rect key="frame" x="95" y="15" width="271" height="21"/>
                                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="8A9-zy-KFw"/>
-                                        <constraint firstItem="ZxZ-ol-0h7" firstAttribute="centerY" secondItem="wlN-r2-5Rw" secondAttribute="centerY" id="pKN-YU-H5f"/>
-                                    </constraints>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8a-NO-F92">
-                                    <rect key="frame" x="0.0" y="366" width="374" height="80"/>
-                                    <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请填写相关店铺公告信息" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dz1-wI-P9G">
-                                            <rect key="frame" x="91" y="7" width="275" height="65"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            <connections>
-                                                <outlet property="delegate" destination="-1" id="Q7P-1R-TyL"/>
-                                            </connections>
-                                        </textView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺公告" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQb-qu-549">
-                                            <rect key="frame" x="13" y="14" width="64" height="22.5"/>
-                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
-                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="80" id="3zB-X4-P2s"/>
-                                        <constraint firstItem="AQb-qu-549" firstAttribute="leading" secondItem="w8a-NO-F92" secondAttribute="leading" constant="13" id="6GE-s5-Xju"/>
-                                        <constraint firstItem="AQb-qu-549" firstAttribute="top" secondItem="w8a-NO-F92" secondAttribute="top" constant="14" id="Yhe-Cq-Mos"/>
-                                        <constraint firstAttribute="bottom" secondItem="dz1-wI-P9G" secondAttribute="bottom" constant="8" id="ksC-jq-yif"/>
-                                        <constraint firstItem="dz1-wI-P9G" firstAttribute="top" secondItem="w8a-NO-F92" secondAttribute="top" constant="7" id="nba-rk-zKS"/>
+                                        <constraint firstAttribute="bottom" secondItem="bAH-kj-nc3" secondAttribute="bottom" constant="40" id="7dK-sT-DBY"/>
+                                        <constraint firstItem="bAH-kj-nc3" firstAttribute="leading" secondItem="wlN-r2-5Rw" secondAttribute="leading" constant="95" id="UpK-eN-sxU"/>
+                                        <constraint firstItem="bAH-kj-nc3" firstAttribute="top" secondItem="wlN-r2-5Rw" secondAttribute="top" constant="15" id="jTC-Sw-Qq8"/>
+                                        <constraint firstAttribute="trailing" secondItem="bAH-kj-nc3" secondAttribute="trailing" constant="8" id="jrU-ys-QMf"/>
                                     </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="BgV-6u-MgY" appends="YES" id="PPW-km-bdj"/>
+                                    </connections>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djk-wZ-S7Z">
-                                    <rect key="frame" x="13" y="476" width="348" height="40"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺介绍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZN-YG-WfS">
+                                    <rect key="frame" x="13" y="302" width="64" height="22.5"/>
+                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8a-NO-F92">
+                                    <rect key="frame" x="0.0" y="366" width="374" height="76"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺公告" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQb-qu-549">
+                                            <rect key="frame" x="13" y="14" width="64" height="22.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="VKU-n4-oDf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请填写活动公告" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxq-9a-E9s">
+                                            <rect key="frame" x="95" y="15" width="271" height="21"/>
+                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="gxq-9a-E9s" firstAttribute="top" secondItem="w8a-NO-F92" secondAttribute="top" constant="15" id="3la-ZJ-vM3"/>
+                                        <constraint firstItem="AQb-qu-549" firstAttribute="leading" secondItem="w8a-NO-F92" secondAttribute="leading" constant="13" id="6GE-s5-Xju"/>
+                                        <constraint firstAttribute="bottom" secondItem="gxq-9a-E9s" secondAttribute="bottom" constant="40" id="HIa-C2-Dqe"/>
+                                        <constraint firstItem="AQb-qu-549" firstAttribute="top" secondItem="w8a-NO-F92" secondAttribute="top" constant="14" id="Yhe-Cq-Mos"/>
+                                        <constraint firstItem="gxq-9a-E9s" firstAttribute="leading" secondItem="AQb-qu-549" secondAttribute="trailing" constant="18" id="dFS-dQ-Z2o"/>
+                                        <constraint firstAttribute="trailing" secondItem="gxq-9a-E9s" secondAttribute="trailing" constant="8" id="xQi-Iq-buX"/>
+                                    </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="UD2-Qv-FuV" appends="YES" id="00i-e8-8KE"/>
+                                    </connections>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djk-wZ-S7Z">
+                                    <rect key="frame" x="13" y="472" width="348" height="40"/>
                                     <color key="backgroundColor" red="0.015686274510000001" green="0.56470588239999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="C4f-KI-mvG"/>
@@ -179,7 +192,7 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWI-xT-sDb">
-                                    <rect key="frame" x="0.0" y="264" width="374" height="50"/>
+                                    <rect key="frame" x="0.0" y="238" width="374" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ast-oL-dVK">
                                             <rect key="frame" x="13" y="14.5" width="64" height="22.5"/>
@@ -193,22 +206,13 @@
                                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <imageView userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightarrow" translatesAutoresizingMaskIntoConstraints="NO" id="Wo8-VE-a3H">
-                                            <rect key="frame" x="350" y="0.0" width="12" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="12" id="uXF-aI-Xvc"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstItem="tU6-La-a5V" firstAttribute="centerY" secondItem="ast-oL-dVK" secondAttribute="centerY" id="0mV-15-3Pc"/>
-                                        <constraint firstItem="Wo8-VE-a3H" firstAttribute="top" secondItem="hWI-xT-sDb" secondAttribute="top" id="38D-kl-7Om"/>
                                         <constraint firstItem="ast-oL-dVK" firstAttribute="centerY" secondItem="hWI-xT-sDb" secondAttribute="centerY" id="3sE-gL-6Fb"/>
-                                        <constraint firstAttribute="trailing" secondItem="Wo8-VE-a3H" secondAttribute="trailing" constant="12" id="AQM-65-jMT"/>
                                         <constraint firstItem="ast-oL-dVK" firstAttribute="leading" secondItem="hWI-xT-sDb" secondAttribute="leading" constant="13" id="EWS-Cf-M4E"/>
-                                        <constraint firstAttribute="bottom" secondItem="Wo8-VE-a3H" secondAttribute="bottom" id="KFk-lN-MLU"/>
                                         <constraint firstAttribute="trailing" secondItem="tU6-La-a5V" secondAttribute="trailing" constant="50" id="L8R-CI-pZM"/>
                                         <constraint firstAttribute="height" constant="50" id="gye-5Y-KFk"/>
                                     </constraints>
@@ -216,38 +220,56 @@
                                         <outletCollection property="gestureRecognizers" destination="EUg-hN-sOY" appends="YES" id="Ooo-S6-Vk4"/>
                                     </connections>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ip-Wy-8GM">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="点击上传图片" translatesAutoresizingMaskIntoConstraints="NO" id="8eF-Hm-gXe">
+                                            <rect key="frame" x="0.0" y="19" width="374" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="ZXS-jj-4sc"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="128" id="9aq-NH-i9s"/>
+                                        <constraint firstItem="8eF-Hm-gXe" firstAttribute="centerY" secondItem="4ip-Wy-8GM" secondAttribute="centerY" id="HCC-xF-kbd"/>
+                                        <constraint firstAttribute="trailing" secondItem="8eF-Hm-gXe" secondAttribute="trailing" id="Jfr-xZ-0JK"/>
+                                        <constraint firstItem="8eF-Hm-gXe" firstAttribute="leading" secondItem="4ip-Wy-8GM" secondAttribute="leading" id="Ti4-Hx-KfM"/>
+                                    </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="xol-h9-Kvs" appends="YES" id="OP9-6s-qqS"/>
+                                    </connections>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" red="0.88719951919999995" green="0.88719951919999995" blue="0.88719951919999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="3I1-ny-DGR" firstAttribute="top" secondItem="tMo-qs-o5E" secondAttribute="bottom" constant="12" id="0zJ-9y-MHz"/>
-                                <constraint firstAttribute="trailing" secondItem="zVM-NM-CNg" secondAttribute="trailing" id="2jJ-xF-5g8"/>
-                                <constraint firstItem="ZxZ-ol-0h7" firstAttribute="trailing" secondItem="Kzf-hz-j2E" secondAttribute="trailing" id="5LY-yz-sBK"/>
-                                <constraint firstItem="dz1-wI-P9G" firstAttribute="trailing" secondItem="ZxZ-ol-0h7" secondAttribute="trailing" id="6gD-oS-aXf"/>
                                 <constraint firstItem="tU6-La-a5V" firstAttribute="leading" secondItem="Kzf-hz-j2E" secondAttribute="leading" id="7cb-Fq-9aB"/>
                                 <constraint firstAttribute="trailing" secondItem="hWI-xT-sDb" secondAttribute="trailing" id="9Dz-Je-sGu"/>
+                                <constraint firstItem="3I1-ny-DGR" firstAttribute="top" secondItem="4ip-Wy-8GM" secondAttribute="bottom" constant="8" id="BED-ID-VmJ"/>
                                 <constraint firstItem="Kzf-hz-j2E" firstAttribute="leading" secondItem="Q97-p5-VrZ" secondAttribute="leading" id="Du6-Wd-qrU"/>
-                                <constraint firstItem="tMo-qs-o5E" firstAttribute="centerX" secondItem="zVM-NM-CNg" secondAttribute="centerX" id="JIh-0W-3jQ"/>
+                                <constraint firstItem="4ip-Wy-8GM" firstAttribute="leading" secondItem="VdD-IJ-cbs" secondAttribute="leading" id="Fjd-sD-bfg"/>
                                 <constraint firstItem="Djk-wZ-S7Z" firstAttribute="leading" secondItem="VdD-IJ-cbs" secondAttribute="leading" constant="13" id="P6P-Nd-d9A"/>
                                 <constraint firstAttribute="trailing" secondItem="3I1-ny-DGR" secondAttribute="trailing" id="RLd-BX-qbn"/>
+                                <constraint firstItem="qZN-YG-WfS" firstAttribute="top" secondItem="hWI-xT-sDb" secondAttribute="bottom" constant="14" id="RgG-md-Ye8"/>
                                 <constraint firstItem="hWI-xT-sDb" firstAttribute="leading" secondItem="VdD-IJ-cbs" secondAttribute="leading" id="T6D-xh-DQh"/>
                                 <constraint firstItem="w8a-NO-F92" firstAttribute="leading" secondItem="VdD-IJ-cbs" secondAttribute="leading" id="VXo-2Z-6rj"/>
                                 <constraint firstItem="3I1-ny-DGR" firstAttribute="leading" secondItem="VdD-IJ-cbs" secondAttribute="leading" id="Y2y-SM-K8R"/>
                                 <constraint firstItem="Djk-wZ-S7Z" firstAttribute="top" secondItem="w8a-NO-F92" secondAttribute="bottom" constant="30" id="a4w-gZ-IPR"/>
-                                <constraint firstItem="ZxZ-ol-0h7" firstAttribute="leading" secondItem="Kzf-hz-j2E" secondAttribute="leading" id="aU4-U4-Rw9"/>
-                                <constraint firstItem="dz1-wI-P9G" firstAttribute="leading" secondItem="ZxZ-ol-0h7" secondAttribute="leading" id="bjn-Z8-NPP"/>
-                                <constraint firstItem="zVM-NM-CNg" firstAttribute="leading" secondItem="VdD-IJ-cbs" secondAttribute="leading" id="cm7-9P-Lpt"/>
-                                <constraint firstItem="tMo-qs-o5E" firstAttribute="centerY" secondItem="zVM-NM-CNg" secondAttribute="centerY" id="dJf-9I-7ZA"/>
-                                <constraint firstItem="tMo-qs-o5E" firstAttribute="width" secondItem="zVM-NM-CNg" secondAttribute="width" id="eEJ-Rb-5nf"/>
+                                <constraint firstAttribute="trailing" secondItem="4ip-Wy-8GM" secondAttribute="trailing" id="bpJ-U7-Jfa"/>
                                 <constraint firstItem="hWI-xT-sDb" firstAttribute="top" secondItem="YSu-Kl-o1L" secondAttribute="bottom" constant="1" id="eVT-Kd-BGa"/>
                                 <constraint firstAttribute="trailing" secondItem="wlN-r2-5Rw" secondAttribute="trailing" id="fD4-uM-n6g"/>
                                 <constraint firstItem="YSu-Kl-o1L" firstAttribute="top" secondItem="3I1-ny-DGR" secondAttribute="bottom" constant="1" id="hGY-VG-z4L"/>
+                                <constraint firstAttribute="bottom" secondItem="Djk-wZ-S7Z" secondAttribute="bottom" constant="12" id="hcU-lY-WZL"/>
+                                <constraint firstItem="qZN-YG-WfS" firstAttribute="leading" secondItem="VdD-IJ-cbs" secondAttribute="leading" constant="13" id="jb4-GS-Swp"/>
                                 <constraint firstItem="YSu-Kl-o1L" firstAttribute="leading" secondItem="VdD-IJ-cbs" secondAttribute="leading" id="khc-l8-08F"/>
+                                <constraint firstItem="4ip-Wy-8GM" firstAttribute="top" secondItem="VdD-IJ-cbs" secondAttribute="top" id="pGZ-Fb-IEI"/>
                                 <constraint firstItem="w8a-NO-F92" firstAttribute="top" secondItem="wlN-r2-5Rw" secondAttribute="bottom" constant="1" id="pic-0c-Xm7"/>
                                 <constraint firstItem="wlN-r2-5Rw" firstAttribute="leading" secondItem="VdD-IJ-cbs" secondAttribute="leading" id="qYo-qd-VbQ"/>
                                 <constraint firstAttribute="trailing" secondItem="Djk-wZ-S7Z" secondAttribute="trailing" constant="13" id="rxj-Le-5OI"/>
                                 <constraint firstAttribute="trailing" secondItem="YSu-Kl-o1L" secondAttribute="trailing" id="uqM-d5-ar2"/>
                                 <constraint firstAttribute="trailing" secondItem="w8a-NO-F92" secondAttribute="trailing" id="wKP-ct-I4g"/>
-                                <constraint firstItem="zVM-NM-CNg" firstAttribute="top" secondItem="VdD-IJ-cbs" secondAttribute="top" id="wo9-5f-zMN"/>
                                 <constraint firstItem="wlN-r2-5Rw" firstAttribute="top" secondItem="hWI-xT-sDb" secondAttribute="bottom" constant="1" id="ycC-v7-evn"/>
                             </constraints>
                         </view>
@@ -258,7 +280,6 @@
                         <constraint firstAttribute="bottom" secondItem="VdD-IJ-cbs" secondAttribute="bottom" id="RQR-BS-Ovg"/>
                         <constraint firstItem="VdD-IJ-cbs" firstAttribute="top" secondItem="OuJ-Xg-dHc" secondAttribute="top" id="ghc-7a-Ez3"/>
                         <constraint firstAttribute="trailing" secondItem="VdD-IJ-cbs" secondAttribute="trailing" id="hkX-vF-07W"/>
-                        <constraint firstItem="VdD-IJ-cbs" firstAttribute="height" secondItem="OuJ-Xg-dHc" secondAttribute="height" id="mb5-tc-9Sn"/>
                     </constraints>
                 </scrollView>
             </subviews>
@@ -279,9 +300,39 @@
                 <action selector="locationAction:" destination="-1" id="LgV-GL-tLN"/>
             </connections>
         </tapGestureRecognizer>
+        <tapGestureRecognizer id="xol-h9-Kvs" userLabel="shopLogoTap">
+            <connections>
+                <action selector="uploadImageAction:" destination="-1" id="9P3-vh-olJ"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="rY9-UI-2Ks" userLabel="phoneTap">
+            <connections>
+                <action selector="editPhoneAction:" destination="-1" id="RhE-RT-Uhm"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="UD2-Qv-FuV" userLabel="infoTap">
+            <connections>
+                <action selector="editInfoAction:" destination="-1" id="Ziq-bm-9My"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="l2v-pS-Zn5" userLabel="addressDetTap">
+            <connections>
+                <action selector="addressDetAction:" destination="-1" id="G1P-1i-ePl"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="meu-VG-rcc" userLabel="shopNameTap">
+            <connections>
+                <action selector="editNameAction:" destination="-1" id="dSr-ZQ-Uxs"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="BgV-6u-MgY" userLabel="shopIntroduceTap">
+            <connections>
+                <action selector="shopEditIntroduceAction:" destination="-1" id="XPk-lb-up9"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="rightarrow" width="8" height="15"/>
+        <image name="点击上传图片" width="99" height="111"/>
         <image name="返回" width="12" height="21"/>
     </resources>
 </document>

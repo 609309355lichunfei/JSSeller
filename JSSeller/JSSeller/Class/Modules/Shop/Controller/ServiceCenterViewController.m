@@ -26,6 +26,15 @@
 
 
 - (IBAction)phoneAction:(id)sender {
+    UIAlertController *alerVC = [UIAlertController alertControllerWithTitle:@"是否要联系客服?" message:@"0574-87566681" preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        NSString *allString = [NSString stringWithFormat:@"tel:0574-87566681"];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:allString] options:@{} completionHandler:nil];
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil];
+    [alerVC addAction:action];
+    [alerVC addAction:cancelAction];
+    [self presentViewController:alerVC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

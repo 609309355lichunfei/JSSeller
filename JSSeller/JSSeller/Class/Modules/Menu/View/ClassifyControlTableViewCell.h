@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class ClassfyModel;
+@class JSSHCateModel;
 @interface ClassifyControlTableViewCell : UITableViewCell
-@property (strong, nonatomic) ClassfyModel *model;
+@property (weak, nonatomic) IBOutlet UIButton *doneBT;
+@property (strong, nonatomic) JSSHCateModel *model;
+@property (copy, nonatomic) void(^doneBlock)(JSSHCateModel *model);
+@property (copy, nonatomic) void (^deleteBlock)(JSSHCateModel *model);
 @end

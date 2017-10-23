@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class MenuModel;
+@class JSSHDishModel;
 @interface MenuTableViewCell : UITableViewCell
-@property (strong, nonatomic) MenuModel *model;
+@property (strong, nonatomic) JSSHDishModel *dishModel;
+
+@property (copy, nonatomic) void(^deleteBlock)(JSSHDishModel *dishModel);
+
 @end
